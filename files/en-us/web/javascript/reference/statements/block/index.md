@@ -132,6 +132,8 @@ console.log(sector);
 console.log(typeof radius); // "undefined"
 ```
 
+### `using` declarations in a block
+
 ## Specifications
 
 {{Specifications}}
