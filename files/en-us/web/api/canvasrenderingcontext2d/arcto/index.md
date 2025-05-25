@@ -859,49 +859,63 @@ can be used to change an underlined element that is in focus.
       "radius-slider",
       state.radiusMax,
       () => state.radius,
-      (value) => (state.radius = value),
+      (value) => {
+        state.radius = value;
+      },
     ),
     new TextInput(
       "value-P0x",
       null,
       state.canvasSize.x,
       () => state.controlPoints[0].x,
-      (value) => (state.controlPoints[0].x = value),
+      (value) => {
+        state.controlPoints[0].x = value;
+      },
     ),
     new TextInput(
       "value-P0y",
       null,
       state.canvasSize.y,
       () => state.controlPoints[0].y,
-      (value) => (state.controlPoints[0].y = value),
+      (value) => {
+        state.controlPoints[0].y = value;
+      },
     ),
     new TextInput(
       "value-P1x",
       null,
       state.canvasSize.x,
       () => state.controlPoints[1].x,
-      (value) => (state.controlPoints[1].x = value),
+      (value) => {
+        state.controlPoints[1].x = value;
+      },
     ),
     new TextInput(
       "value-P1y",
       null,
       state.canvasSize.y,
       () => state.controlPoints[1].y,
-      (value) => (state.controlPoints[1].y = value),
+      (value) => {
+        state.controlPoints[1].y = value;
+      },
     ),
     new TextInput(
       "value-P2x",
       null,
       state.canvasSize.x,
       () => state.controlPoints[2].x,
-      (value) => (state.controlPoints[2].x = value),
+      (value) => {
+        state.controlPoints[2].x = value;
+      },
     ),
     new TextInput(
       "value-P2y",
       null,
       state.canvasSize.y,
       () => state.controlPoints[2].y,
-      (value) => (state.controlPoints[2].y = value),
+      (value) => {
+        state.controlPoints[2].y = value;
+      },
     ),
   ];
 
@@ -909,7 +923,9 @@ can be used to change an underlined element that is in focus.
   addPointArrowMoves();
 
   /* Initialize the text inputs from the associated state values */
-  textInputs.forEach((ti) => (ti.elementText.textContent = ti.getStateValue()));
+  textInputs.forEach((ti) => {
+    ti.elementText.textContent = ti.getStateValue();
+  });
 
   /* Canvas setup */
   const canvas = document.getElementById("canvas");

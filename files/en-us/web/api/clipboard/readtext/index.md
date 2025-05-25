@@ -50,9 +50,9 @@ This example retrieves the textual contents of the clipboard and inserts the ret
 ```js
 const destination = document.getElementById("outbox");
 destinationImage.addEventListener("click", () => {
-  navigator.clipboard
-    .readText()
-    .then((clipText) => (destination.innerText = clipText));
+  navigator.clipboard.readText().then((clipText) => {
+    destination.innerText = clipText;
+  });
 });
 ```
 

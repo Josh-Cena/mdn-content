@@ -184,7 +184,9 @@ function onButtonClicked() {
     });
   } else {
     // Button is a toggle button.
-    xrSession.end().then(() => (xrSession = null));
+    xrSession.end().then(() => {
+      xrSession = null;
+    });
   }
 }
 ```

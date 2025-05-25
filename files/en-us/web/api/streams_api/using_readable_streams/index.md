@@ -98,7 +98,10 @@ fetch("./tortoise.png")
   .then((response) => response.blob())
   .then((blob) => URL.createObjectURL(blob))
   // Update image
-  .then((url) => console.log((image.src = url)))
+  .then((url) => {
+    console.log(url);
+    image.src = url;
+  })
   .catch((err) => console.error(err));
 ```
 
@@ -503,7 +506,10 @@ readableStream
   .then((stream) => new Response(stream))
   .then((response) => response.blob())
   .then((blob) => URL.createObjectURL(blob))
-  .then((url) => console.log((image.src = url)))
+  .then((url) => {
+    console.log(url);
+    image.src = url;
+  })
   .catch((err) => console.error(err));
 ```
 

@@ -100,15 +100,11 @@ document.querySelectorAll("button").forEach((elem) => {
 });
 
 /* Set event listeners for the divs */
-document
-  .querySelectorAll("div")
-  .forEach((elem) =>
-    elem.addEventListener(
-      "click",
-      (evt) =>
-        (outElem.textContent += `Click event processed on "${elem.firstChild.data.trim()}"\n`),
-    ),
-  );
+document.querySelectorAll("div").forEach((elem) =>
+  elem.addEventListener("click", (evt) => {
+    outElem.textContent += `Click event processed on "${elem.firstChild.data.trim()}"\n`;
+  }),
+);
 ```
 
 #### Result

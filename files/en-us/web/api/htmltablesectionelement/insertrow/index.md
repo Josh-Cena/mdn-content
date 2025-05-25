@@ -101,9 +101,9 @@ addButton.addEventListener("click", () => {
   const newRow = bodySection.insertRow();
 
   // Add cells inside the new row
-  ["A", "B", "C"].forEach(
-    (elt) => (newRow.insertCell().textContent = `${elt}${rows.length}`),
-  );
+  ["A", "B", "C"].forEach((elt) => {
+    newRow.insertCell().textContent = `${elt}${rows.length}`;
+  });
 
   // Update the row counter
   updateRowNumber();

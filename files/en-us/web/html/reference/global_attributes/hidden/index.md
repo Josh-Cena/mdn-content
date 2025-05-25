@@ -185,10 +185,9 @@ div#until-found-box {
 
 ```js
 const untilFound = document.querySelector("#until-found-box");
-untilFound.addEventListener(
-  "beforematch",
-  () => (untilFound.textContent = "I've been revealed!"),
-);
+untilFound.addEventListener("beforematch", () => {
+  untilFound.textContent = "I've been revealed!";
+});
 ```
 
 ```js hidden

@@ -310,7 +310,9 @@ The following JavaScript could be used to create a circular reveal view transiti
 ```js
 // Store the last click event
 let lastClick;
-addEventListener("click", (event) => (lastClick = event));
+addEventListener("click", (event) => {
+  lastClick = event;
+});
 
 function spaNavigate(data) {
   // Fallback for browsers that don't support this API:

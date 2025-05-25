@@ -64,7 +64,9 @@ function write(data) {
         ndef
           .write(data)
           .then(resolve, reject)
-          .finally(() => (ignoreRead = false));
+          .finally(() => {
+            ignoreRead = false;
+          });
       },
       { once: true },
     );

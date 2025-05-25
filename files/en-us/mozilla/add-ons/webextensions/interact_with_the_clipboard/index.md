@@ -135,9 +135,9 @@ The Clipboard API's {{domxref("Clipboard.readText", "navigator.clipboard.readTex
 Once you have the `"clipboard-read"` permission from the [Permissions API](/en-US/docs/Web/API/Permissions_API), you can read from the clipboard easily. For example, this snippet of code fetches the text from the clipboard and replaces the contents of the element with the ID `"outbox"` with that text.
 
 ```js
-navigator.clipboard
-  .readText()
-  .then((clipText) => (document.getElementById("outbox").innerText = clipText));
+navigator.clipboard.readText().then((clipText) => {
+  document.getElementById("outbox").innerText = clipText;
+});
 ```
 
 ### Using execCommand()

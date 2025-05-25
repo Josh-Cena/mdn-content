@@ -24,7 +24,9 @@ In the following example, `ready` is used to trigger a custom circular reveal vi
 ```js
 // Store the last click event
 let lastClick;
-addEventListener("click", (event) => (lastClick = event));
+addEventListener("click", (event) => {
+  lastClick = event;
+});
 
 function spaNavigate(data) {
   // Fallback for browsers that don't support this API:

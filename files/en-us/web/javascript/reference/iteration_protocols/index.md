@@ -478,9 +478,11 @@ someString[Symbol.iterator] = function () {
   return {
     // this is the iterator object, returning a single element (the string "bye")
     next() {
-      return this._first
-        ? { value: "bye", done: (this._first = false) }
-        : { done: true };
+      if (this._first) {
+        this._first = false;
+        return { value: "bye", done: false };
+      }
+      return { done: true };
     },
     _first: true,
   };

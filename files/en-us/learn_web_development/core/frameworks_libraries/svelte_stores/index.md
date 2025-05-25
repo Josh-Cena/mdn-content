@@ -126,13 +126,15 @@ Let's now create our `Alert` component and see how we can read values from the s
 
      let alertContent = "";
 
-     const unsubscribe = alert.subscribe((value) => (alertContent = value));
+     const unsubscribe = alert.subscribe((value) => {
+       alertContent = value;
+     });
 
      onDestroy(unsubscribe);
    </script>
 
    {#if alertContent}
-   <div on:click={() => (alertContent = "")}>
+   <div on:click={() => { alertContent = ""; }}>
      <p>{ alertContent }</p>
    </div>
    {/if}
@@ -212,7 +214,9 @@ This works, but you'll have to copy and paste all this code every time you want 
 
   let myStoreContent = "";
 
-  const unsubscribe = myStore.subscribe((value) => (myStoreContent = value));
+  const unsubscribe = myStore.subscribe((value) => {
+    myStoreContent = value;
+  });
 
   onDestroy(unsubscribe);
 </script>
@@ -357,7 +361,10 @@ Let's see how to do that. We'll specify a prop with the milliseconds to wait bef
        visible = false;
      } else {
        visible = true; // show alert
-       if (ms > 0) timeout = setTimeout(() => (visible = false), ms); // and hide it after ms milliseconds
+       if (ms > 0)
+         timeout = setTimeout(() => {
+           visible = false;
+         }, ms); // and hide it after ms milliseconds
      }
    };
    $: onMessageChange($alert, ms); // whenever the alert store or the ms props changes run onMessageChange
@@ -492,7 +499,10 @@ export const writable = (initial_value = 0) => {
   const subscribe = (handler) => {
     subs = [...subs, handler]; // add handler to the array of subscribers
     handler(value); // call handler with current value
-    return () => (subs = subs.filter((sub) => sub !== handler)); // return unsubscribe function
+    // return unsubscribe function
+    return () => {
+      subs = subs.filter((sub) => sub !== handler);
+    };
   };
 
   const set = (new_value) => {

@@ -137,7 +137,9 @@ async function openCall(pc) {
 The remote peer might then use a {{DOMxRef("RTCPeerConnection/track_event", "track")}} event handler that looks like this:
 
 ```js
-pc.ontrack = ({ streams: [stream] }) => (videoElem.srcObject = stream);
+pc.ontrack = ({ streams: [stream] }) => {
+  videoElem.srcObject = stream;
+};
 ```
 
 This sets the video element's current stream to the one that contains the track that's been added to the connection.

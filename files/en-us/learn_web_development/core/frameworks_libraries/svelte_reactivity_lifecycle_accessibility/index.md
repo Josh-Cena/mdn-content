@@ -127,10 +127,13 @@ Now we'll tackle the _Check All_ and _Remove Completed_ buttons. Let's create a 
 
    ```js
    const checkAllTodos = (completed) =>
-     todos.forEach((t) => (t.completed = completed));
+     todos.forEach((t) => {
+       t.completed = completed;
+     });
 
-   const removeCompletedTodos = () =>
-     (todos = todos.filter((t) => !t.completed));
+   const removeCompletedTodos = () => {
+     todos = todos.filter((t) => !t.completed);
+   };
    ```
 
 5. Now go to the bottom of the `Todos.svelte` markup section and replace the `<div class="btn-group">` element that we copied into `MoreActions.svelte` with a call to the `MoreActions` component, like so:
@@ -155,7 +158,9 @@ To see what's happening we can log the `todos` array from the `checkAllTodos()` 
 
    ```js
    const checkAllTodos = (completed) => {
-     todos.forEach((t) => (t.completed = completed));
+     todos.forEach((t) => {
+       t.completed = completed;
+     });
      console.log("todos", todos);
    };
    ```
@@ -189,7 +194,9 @@ Svelte won't update references to `obj.foo.bar`, unless you follow it up with `o
 In our `checkAllTodos()` function, when we run:
 
 ```js
-todos.forEach((t) => (t.completed = completed));
+todos.forEach((t) => {
+  t.completed = completed;
+});
 ```
 
 Svelte will not mark `todos` as changed because it does not know that when we update our `t` variable inside the `forEach()` method, we are also modifying the `todos` array. And that makes sense, because otherwise Svelte would be aware of the inner workings of the `forEach()` method; the same would therefore be true for any method attached to any object or array.
@@ -200,7 +207,9 @@ As we already saw, we could just tell Svelte to update the variable with a self-
 
 ```js
 const checkAllTodos = (completed) => {
-  todos.forEach((t) => (t.completed = completed));
+  todos.forEach((t) => {
+    t.completed = completed;
+  });
   todos = todos;
 };
 ```
@@ -211,7 +220,9 @@ We could also access the `todos` array by index, like this:
 
 ```js
 const checkAllTodos = (completed) => {
-  todos.forEach((t, i) => (todos[i].completed = completed));
+  todos.forEach((t, i) => {
+    todos[i].completed = completed;
+  });
 };
 ```
 

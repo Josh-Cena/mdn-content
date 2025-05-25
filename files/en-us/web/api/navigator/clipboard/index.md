@@ -21,11 +21,9 @@ The {{domxref("Clipboard")}} object used to access the system clipboard.
 The following code uses `navigator.clipboard` to access the system clipboard in order to read text contents from the clipboard.
 
 ```js
-navigator.clipboard
-  .readText()
-  .then(
-    (clipText) => (document.querySelector(".clip-text").innerText = clipText),
-  );
+navigator.clipboard.readText().then((clipText) => {
+  document.querySelector(".clip-text").innerText = clipText;
+});
 ```
 
 This snippet replaces the contents of the element whose class is `"clip-text"` with the text contents of the clipboard.

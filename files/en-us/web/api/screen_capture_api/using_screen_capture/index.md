@@ -215,9 +215,12 @@ stopElem.addEventListener(
 This example overrides certain {{domxref("console")}} methods to output their messages to the {{HTMLElement("pre")}} block whose ID is `log`.
 
 ```js
-console.log = (msg) => (logElem.textContent = `${logElem.textContent}\n${msg}`);
-console.error = (msg) =>
-  (logElem.textContent = `${logElem.textContent}\nError: ${msg}`);
+console.log = (msg) => {
+  logElem.textContent = `${logElem.textContent}\n${msg}`;
+};
+console.error = (msg) => {
+  logElem.textContent = `${logElem.textContent}\nError: ${msg}`;
+};
 ```
 
 This allows us to use {{domxref("console/log_static", "console.log()")}} and {{domxref("console.error_static", "console.error()")}} to log information to the log box in the document.

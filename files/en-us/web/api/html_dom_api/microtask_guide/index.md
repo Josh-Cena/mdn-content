@@ -188,7 +188,9 @@ In this simple example, we see that enqueueing a microtask causes the microtask'
 
 ```js hidden
 const logElem = document.getElementById("log");
-const log = (s) => (logElem.innerText += `${s}\n`);
+const log = (s) => {
+  logElem.innerText += `${s}\n`;
+};
 ```
 
 In the following code, we see a call to {{domxref("Window.queueMicrotask()", "queueMicrotask()")}} used to schedule a microtask to run. This call is bracketed by calls to `log()`, a custom function that outputs text to the screen.
@@ -217,7 +219,9 @@ In this example, a timeout is scheduled to fire after zero milliseconds (or "as 
 
 ```js hidden
 const logElem = document.getElementById("log");
-const log = (s) => (logElem.innerText += `${s}\n`);
+const log = (s) => {
+  logElem.innerText += `${s}\n`;
+};
 ```
 
 In the following code, we see a call to {{domxref("Window.queueMicrotask()", "queueMicrotask()")}} used to schedule a microtask to run. This call is bracketed by calls to `log()`, a custom function that outputs text to the screen.
@@ -253,7 +257,9 @@ This example expands slightly on the previous one by adding a function that does
 
 ```js hidden
 const logElem = document.getElementById("log");
-const log = (s) => (logElem.innerText += `${s}\n`);
+const log = (s) => {
+  logElem.innerText += `${s}\n`;
+};
 ```
 
 The main program code follows. The `doWork()` function here calls `queueMicrotask()`, yet the microtask still doesn't fire until the entire program exits, since that's when the task exits and there's nothing else on the execution stack.

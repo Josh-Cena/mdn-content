@@ -99,11 +99,9 @@ This snippet fetches the text from the clipboard and appends it to the first ele
 Since {{domxref("Clipboard.readText", "readText()")}} returns an empty string if the clipboard isn't text, this code is safe.
 
 ```js
-navigator.clipboard
-  .readText()
-  .then(
-    (clipText) => (document.querySelector(".editor").innerText += clipText),
-  );
+navigator.clipboard.readText().then((clipText) => {
+  document.querySelector(".editor").innerText += clipText;
+});
 ```
 
 ## Specifications

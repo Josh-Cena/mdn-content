@@ -453,15 +453,16 @@ function draw(x, y) {
 canvas.addEventListener("mousemove", (event) =>
   draw(event.offsetX, event.offsetY),
 );
-canvas.addEventListener("mousedown", () => (isDrawing = true));
-canvas.addEventListener("mouseup", () => (isDrawing = false));
+canvas.addEventListener("mousedown", () => {
+  isDrawing = true;
+});
+canvas.addEventListener("mouseup", () => {
+  isDrawing = false;
+});
 
-document
-  .querySelector("a")
-  .addEventListener(
-    "click",
-    (event) => (event.target.href = canvas.toDataURL()),
-  );
+document.querySelector("a").addEventListener("click", (event) => {
+  event.target.href = canvas.toDataURL();
+});
 ```
 
 ##### Result

@@ -310,7 +310,8 @@ function setDescendantProp(obj, desc, value) {
   while (arr.length > 1) {
     obj = obj[arr.shift()];
   }
-  return (obj[arr[0]] = value);
+  obj[arr[0]] = value;
+  return value;
 }
 
 const obj = { a: { b: { c: 0 } } };
