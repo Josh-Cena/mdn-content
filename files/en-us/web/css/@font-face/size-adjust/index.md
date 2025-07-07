@@ -46,7 +46,7 @@ The `size-adjust` property can help when overriding the metrics of a fallback fo
 
 @font-face {
   font-family: local-font;
-  src: local(Local Font);
+  src: local("Local Font");
   size-adjust: 90%;
 }
 ```

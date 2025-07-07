@@ -47,7 +47,7 @@ p {
 
 ```css
 /* Initial value */
-text-emphasis-color: currentcolor;
+text-emphasis-color: currentColor;
 
 /* <color> */
 text-emphasis-color: #555;
@@ -66,7 +66,7 @@ text-emphasis-color: unset;
 ### Values
 
 - `<color>`
-  - : Defines the color of the emphasis marks. If no color is present, it defaults to `currentcolor`.
+  - : Defines the color of the emphasis marks. If no color is present, it defaults to `currentColor`.
 
 ## Formal definition
 

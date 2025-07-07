@@ -72,7 +72,7 @@ For illustrative purposes, we absolutely position the anchor so that it appears 
 }
 
 .anchor {
-  anchor-name: --myAnchor;
+  anchor-name: --my-anchor;
   position: absolute;
   top: 100px;
   left: 45%;
@@ -95,7 +95,7 @@ The anchor-positioned element is given fixed positioning and tethered to the anc
 ```css
 .infobox {
   position: fixed;
-  position-anchor: --myAnchor;
+  position-anchor: --my-anchor;
   position-area: top left;
   position-try-fallbacks: flip-block, flip-inline;
 }
@@ -149,7 +149,7 @@ body {
 }
 
 .anchor {
-  anchor-name: --myAnchor;
+  anchor-name: --my-anchor;
   position: absolute;
   top: 100px;
   left: 45%;
@@ -168,7 +168,7 @@ body {
 ```css-nolint
 .infobox {
   position: fixed;
-  position-anchor: --myAnchor;
+  position-anchor: --my-anchor;
   position-area: top left;
   position-try-fallbacks:
     flip-block,
@@ -215,7 +215,7 @@ body {
 }
 
 .anchor {
-  anchor-name: --myAnchor;
+  anchor-name: --my-anchor;
   position: absolute;
   top: 100px;
   left: 45%;
@@ -234,7 +234,7 @@ body {
 ```css-nolint
 .infobox {
   position: fixed;
-  position-anchor: --myAnchor;
+  position-anchor: --my-anchor;
   position-area: top left;
   position-try-fallbacks:
     top, top right, right,
@@ -303,7 +303,7 @@ body {
 }
 
 .anchor {
-  anchor-name: --myAnchor;
+  anchor-name: --my-anchor;
   position: absolute;
   top: 100px;
   left: 45%;
@@ -348,7 +348,7 @@ Once our custom try fallback options are created, we can include them in the pos
 ```css-nolint
 .infobox {
   position: fixed;
-  position-anchor: --myAnchor;
+  position-anchor: --my-anchor;
   position-area: top;
   width: 200px;
   margin: 0 0 10px 0;
@@ -432,7 +432,7 @@ We include a custom try fallback option — `--custom-bottom` — which position
 }
 
 .anchor {
-  anchor-name: --myAnchor;
+  anchor-name: --my-anchor;
   position: absolute;
   top: 100px;
   left: 45%;
@@ -468,7 +468,7 @@ We initially position the infobox at the top of the anchor, and then give it our
 ```css
 .infobox {
   position: fixed;
-  position-anchor: --myAnchor;
+  position-anchor: --my-anchor;
   bottom: anchor(top);
   margin-bottom: 10px;
   justify-self: anchor-center;
@@ -558,7 +558,7 @@ This example uses the same HTML and CSS as in the previous examples, with the in
 }
 
 .anchor {
-  anchor-name: --myAnchor;
+  anchor-name: --my-anchor;
 }
 
 body {
@@ -581,7 +581,7 @@ body {
 ```css
 .infobox {
   position: fixed;
-  position-anchor: --myAnchor;
+  position-anchor: --my-anchor;
   margin-bottom: 5px;
   position-area: top span-all;
   position-visibility: no-overflow;

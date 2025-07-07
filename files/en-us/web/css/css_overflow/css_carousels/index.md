@@ -210,12 +210,12 @@ First of all, a reference {{cssxref("anchor-name")}} is set on the list. Next, e
 
 ```css live-sample___first-example live-sample___first-example-step2
 ul {
-  anchor-name: --myCarousel;
+  anchor-name: --my-carousel;
 }
 
 ul::scroll-button(*) {
   position: absolute;
-  position-anchor: --myCarousel;
+  position-anchor: --my-carousel;
 }
 ```
 
@@ -262,7 +262,7 @@ Next, the list's `::scroll-marker-group` pseudo-element is positioned relative t
 ```css live-sample___first-example
 ul::scroll-marker-group {
   position: absolute;
-  position-anchor: --myCarousel;
+  position-anchor: --my-carousel;
   top: calc(anchor(bottom) - 70px);
   justify-self: anchor-center;
 
@@ -483,12 +483,12 @@ ul::scroll-button(right) {
 }
 
 ul {
-  anchor-name: --myCarousel;
+  anchor-name: --my-carousel;
 }
 
 ul::scroll-button(*) {
   position: absolute;
-  position-anchor: --myCarousel;
+  position-anchor: --my-carousel;
 }
 
 ul::scroll-button(left) {
@@ -507,7 +507,7 @@ ul {
 
 ul::scroll-marker-group {
   position: absolute;
-  position-anchor: --myCarousel;
+  position-anchor: --my-carousel;
   top: calc(anchor(bottom) - 70px);
   justify-self: anchor-center;
   display: flex;

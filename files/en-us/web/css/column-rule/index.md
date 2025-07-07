@@ -95,7 +95,7 @@ The `column-rule` property is specified as one, two, or three of the values list
 ### Example 1
 
 ```css
-/* Same as "medium dotted currentcolor" */
+/* Same as "medium dotted currentColor" */
 p.foo {
   column-rule: dotted;
 }
@@ -105,7 +105,7 @@ p.bar {
   column-rule: solid blue;
 }
 
-/* Same as "8px solid currentcolor" */
+/* Same as "8px solid currentColor" */
 p.baz {
   column-rule: solid 8px;
 }

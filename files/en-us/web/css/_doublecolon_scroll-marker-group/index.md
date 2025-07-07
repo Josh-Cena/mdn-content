@@ -154,7 +154,7 @@ The list's `::scroll-marker-group` pseudo-element is positioned relative to the 
 
 ```css live-sample___carousel-example_final
 ul {
-  anchor-name: --myCarousel;
+  anchor-name: --my-carousel;
 }
 
 ul::scroll-marker-group {
@@ -163,7 +163,7 @@ ul::scroll-marker-group {
   gap: 20px;
 
   position: absolute;
-  position-anchor: --myCarousel;
+  position-anchor: --my-carousel;
   top: calc(anchor(bottom) - 70px);
   justify-self: anchor-center;
 }

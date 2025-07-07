@@ -56,7 +56,7 @@ CSS.paintWorklet.addModule(
 );
 ```
 
-In the CSS, we define the `background-image` as a `paint()` type with the worklet name, `boxbg`, along with any variables (ex. `--boxColor` and `--widthSubtractor`) the worklet will use:
+In the CSS, we define the `background-image` as a `paint()` type with the worklet name, `boxbg`, along with any variables (ex. `--box-color` and `--width-subtractor`) the worklet will use:
 
 ```css live-sample___example-boxbg
 body {
@@ -64,17 +64,17 @@ body {
 }
 li {
   background-image: paint(boxbg);
-  --boxColor: hsl(55 90% 60%);
+  --box-color: hsl(55 90% 60%);
 }
 
 li:nth-of-type(3n) {
-  --boxColor: hsl(155 90% 60%);
-  --widthSubtractor: 20;
+  --box-color: hsl(155 90% 60%);
+  --width-subtractor: 20;
 }
 
 li:nth-of-type(3n + 1) {
-  --boxColor: hsl(255 90% 60%);
-  --widthSubtractor: 40;
+  --box-color: hsl(255 90% 60%);
+  --width-subtractor: 40;
 }
 ```
 
@@ -112,17 +112,17 @@ body {
 }
 
 li {
-  --boxColor: hsl(55 90% 60% / 100%);
+  --box-color: hsl(55 90% 60% / 100%);
   background-image: paint(hollowHighlights, stroke, 2px);
 }
 
 li:nth-of-type(3n) {
-  --boxColor: hsl(155 90% 60% / 100%);
+  --box-color: hsl(155 90% 60% / 100%);
   background-image: paint(hollowHighlights, filled, 3px);
 }
 
 li:nth-of-type(3n + 1) {
-  --boxColor: hsl(255 90% 60% / 100%);
+  --box-color: hsl(255 90% 60% / 100%);
   background-image: paint(hollowHighlights, stroke, 1px);
 }
 ```
