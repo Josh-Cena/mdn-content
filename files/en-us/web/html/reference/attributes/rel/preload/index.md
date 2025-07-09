@@ -170,9 +170,9 @@ Let's look at an example (see it on GitHub — [source code](https://github.com/
     const header = document.querySelector("header");
 
     if (mediaQueryList.matches) {
-      header.style.backgroundImage = "url(bg-image-narrow.png)";
+      header.style.backgroundImage = 'url("bg-image-narrow.png")';
     } else {
-      header.style.backgroundImage = "url(bg-image-wide.png)";
+      header.style.backgroundImage = 'url("bg-image-wide.png")';
     }
   </script>
 </body>

@@ -21,7 +21,7 @@ A value which is not specified is set to its initial value. That means that it *
 ```css
 p {
   background-color: red;
-  background: url(images/bg.gif) no-repeat left top;
+  background: url("images/bg.gif") no-repeat left top;
 }
 ```
 
@@ -68,7 +68,7 @@ Consider a background with the following properties
 
 ```css
 background-color: #000;
-background-image: url(images/bg.gif);
+background-image: url("images/bg.gif");
 background-repeat: no-repeat;
 background-position: left top;
 ```
@@ -76,7 +76,7 @@ background-position: left top;
 These four declarations can be shortened to just one:
 
 ```css
-background: #000 url(images/bg.gif) no-repeat left top;
+background: #000 url("images/bg.gif") no-repeat left top;
 ```
 
 (The shorthand form is actually the equivalent of the longhand properties above plus `background-attachment: scroll` and, in CSS3, some additional properties.)

@@ -40,7 +40,7 @@ body {
 }
 img {
   float: left;
-  shape-outside: url(https://mdn.github.io/shared-assets/images/examples/star-shape.png);
+  shape-outside: url("https://mdn.github.io/shared-assets/images/examples/star-shape.png");
 }
 ```
 
@@ -74,7 +74,7 @@ body {
 
 img {
   float: left;
-  shape-outside: url(https://mdn.github.io/shared-assets/images/examples/star-shape.png);
+  shape-outside: url("https://mdn.github.io/shared-assets/images/examples/star-shape.png");
   shape-margin: 20px;
 }
 ```
@@ -121,7 +121,7 @@ body {
 
 img {
   float: left;
-  shape-outside: url(https://mdn.github.io/shared-assets/images/examples/star-red-20.png);
+  shape-outside: url("https://mdn.github.io/shared-assets/images/examples/star-red-20.png");
   shape-image-threshold: 0.2;
 }
 ```
@@ -160,7 +160,7 @@ body {
   float: left;
   width: 400px;
   height: 300px;
-  shape-outside: url(https://mdn.github.io/shared-assets/images/examples/star-shape.png);
+  shape-outside: url("https://mdn.github.io/shared-assets/images/examples/star-shape.png");
   shape-image-threshold: 0.3;
 }
 ```

@@ -66,7 +66,7 @@ Then the four boxes defining the segments of the image are defined. Let's look a
 
 ```css
 #box1 {
-  background-image: -moz-image-rect(url(firefox.png), 0%, 50%, 50%, 0%);
+  background-image: -moz-image-rect(url("firefox.png"), 0%, 50%, 50%, 0%);
   width: 133px;
   height: 136px;
   left: 0px;
@@ -79,7 +79,7 @@ This is the top-left corner of the image. It defines a rectangle containing the 
 
 ```css
 #box2 {
-  background-image: -moz-image-rect(url(firefox.png), 0%, 100%, 50%, 50%);
+  background-image: -moz-image-rect(url("firefox.png"), 0%, 100%, 50%, 50%);
   width: 133px;
   height: 136px;
   left: 133px;
@@ -94,7 +94,7 @@ The other corners follow a similar pattern:
 
 ```css
 #box3 {
-  background-image: -moz-image-rect(url(firefox.png), 50%, 50%, 100%, 0%);
+  background-image: -moz-image-rect(url("firefox.png"), 50%, 50%, 100%, 0%);
   width: 133px;
   height: 136px;
   left: 0px;
@@ -102,7 +102,7 @@ The other corners follow a similar pattern:
   position: absolute;
 }
 #box4 {
-  background-image: -moz-image-rect(url(firefox.png), 50%, 100%, 100%, 50%);
+  background-image: -moz-image-rect(url("firefox.png"), 50%, 100%, 100%, 50%);
   width: 133px;
   height: 136px;
   left: 133px;

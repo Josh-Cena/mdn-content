@@ -247,7 +247,7 @@ A single SVG can be used to define several filters, each with an `id`:
 The filter's `id` is referenced in the `url()` for both inline and external SVGs:
 
 ```css
-filter: url(#blur3);
+filter: url("#blur3");
 filter: url("https://example.com/svg/filters.svg#blur3");
 ```
 
@@ -310,7 +310,7 @@ The SVG `url()` filter value can be included as the value of the SVG [`<image>`]
   filter: blur(3.5px);
 }
 .svgFilter {
-  filter: url(#blur);
+  filter: url("#blur");
 }
 ```
 

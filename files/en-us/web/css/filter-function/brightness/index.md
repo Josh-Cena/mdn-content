@@ -79,7 +79,7 @@ This example shows how to apply the `brightness()` filter to a paragraph via the
 
 ```css
 .container {
-  background: url(be_fierce.jpg) no-repeat right / contain #d4d5b2;
+  background: url("be_fierce.jpg") no-repeat right / contain #d4d5b2;
 }
 p {
   backdrop-filter: brightness(150%);
@@ -184,8 +184,8 @@ The following declarations produce similar effects:
 
 ```css
 filter: brightness(75%);
-filter: url(#darken25); /* with embedded SVG */
-filter: url(folder/fileName.svg#darken25); /* external svg filter definition */
+filter: url("#darken25"); /* with embedded SVG */
+filter: url("folder/fileName.svg#darken25"); /* external svg filter definition */
 ```
 
 In the images below, the first one has a `brightness()` filter function applied, the second one has a similar SVG brightness function applied, and the third is the original image for comparison.
@@ -209,7 +209,7 @@ In the images below, the first one has a `brightness()` filter function applied,
       </td>
       <td>
         <img
-          style="filter: url(#darken25)"
+          style="filter: url("#darken25")"
           src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
           alt="darkened pride flag" />
       </td>

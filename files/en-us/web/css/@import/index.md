@@ -129,8 +129,8 @@ supports((selector(h2 > p)) and (font-tech(color-COLRv1)));
 In the above example, a cascade layer named `utilities` is created and it will include rules from the imported stylesheet `theme`.
 
 ```css
-@import url(headings.css) layer(default);
-@import url(links.css) layer(default);
+@import url("headings.css") layer(default);
+@import url("links.css") layer(default);
 
 @layer default {
   audio[controls] {

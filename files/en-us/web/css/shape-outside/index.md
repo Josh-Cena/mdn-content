@@ -20,7 +20,7 @@ shape-outside: ellipse(130px 140px at 20% 20%);
 ```
 
 ```css interactive-example-choice
-shape-outside: url(/shared-assets/images/examples/round-balloon.png);
+shape-outside: url("/shared-assets/images/examples/round-balloon.png");
 ```
 
 ```css interactive-example-choice
@@ -81,7 +81,7 @@ shape-outside: circle() border-box;
 shape-outside: margin-box ellipse();
 
 /* <url> value */
-shape-outside: url(image.png);
+shape-outside: url("image.png");
 
 /* <gradient> value */
 shape-outside: linear-gradient(45deg, #fff 150px, red 150px);

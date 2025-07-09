@@ -92,7 +92,7 @@ offset-path: ray(contain 150deg at center center);
 offset-path: ray(45deg);
 
 /* URL */
-offset-path: url(#myCircle);
+offset-path: url("#my-circle");
 
 /* Basic shape */
 offset-path: circle(50% at 25% 25%);
@@ -318,7 +318,7 @@ The SVG rectangle that defines the path shape is shown here only to visually dem
   height: 50px;
   border-radius: 50%;
   background-color: green;
-  offset-path: url(#svgRect);
+  offset-path: url("#svgRect");
   offset-anchor: auto;
   animation: move 5s linear infinite;
 }

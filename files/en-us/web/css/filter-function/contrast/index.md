@@ -77,7 +77,7 @@ This example applies a `contrast()` filter via the {{cssxref("backdrop-filter")}
 
 ```css
 .container {
-  background: url(unity_for_the_people.jpg) no-repeat center / contain #339;
+  background: url("unity_for_the_people.jpg") no-repeat center / contain #339;
 }
 p {
   backdrop-filter: contrast(0.5);
@@ -177,8 +177,8 @@ These values produce the same results:
 
 ```css
 filter: contrast(200%);
-filter: url(#contrast); /* with embedded SVG */
-filter: url(folder/fileName.svg#contrast); /* external svg filter definition */
+filter: url("#contrast"); /* with embedded SVG */
+filter: url("folder/fileName.svg#contrast"); /* external svg filter definition */
 ```
 
 This example shows three images: the image with a `contrast()` filter function applied, the image with an equivalent `url()` filter applied, and the original images for comparison:
@@ -202,7 +202,7 @@ This example shows three images: the image with a `contrast()` filter function a
       </td>
       <td>
         <img
-          style="filter: url(#contrast)"
+          style="filter: url("#contrast")"
           src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
           alt="Pride flag" />
       </td>

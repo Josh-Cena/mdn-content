@@ -24,8 +24,8 @@ In this example, we create five mask layers, including an imported image, two gr
 ```css
 .masked-element {
   mask-image:
-    url(alphaImage.png), linear-gradient(to right, black, transparent),
-    radial-gradient(circle, white 50%, transparent 75%), none, url(#svg-mask);
+    url("alphaImage.png"), linear-gradient(to right, black, transparent),
+    radial-gradient(circle, white 50%, transparent 75%), none, url("#svg-mask");
 }
 ```
 
@@ -42,8 +42,8 @@ If a `mask-*` property has a single value, this value applies to all the layers.
 ```css
 .masked-element {
   mask-image:
-    url(alphaImage.png), linear-gradient(to right, black, transparent),
-    radial-gradient(circle, white 50%, transparent 75%), none, url(#svg-mask);
+    url("alphaImage.png"), linear-gradient(to right, black, transparent),
+    radial-gradient(circle, white 50%, transparent 75%), none, url("#svg-mask");
   mask-repeat: repeat-x, repeat-y;
   mask-position:
     center,
@@ -163,8 +163,8 @@ Continuing with the `masked-element` example, if we don't explicitly set the `ma
 ```css
 .masked-element {
   mask-image:
-    url(alphaImage.png), linear-gradient(to right, black, transparent),
-    radial-gradient(circle, white 50%, transparent 75%), none, url(#svg-mask);
+    url("alphaImage.png"), linear-gradient(to right, black, transparent),
+    radial-gradient(circle, white 50%, transparent 75%), none, url("#svg-mask");
   mask-mode: match-source;
 }
 ```
@@ -174,15 +174,15 @@ or, using the `mask` shorthand:
 ```css
 .masked-element {
   mask:
-    url(alphaImage.png) match-source,
+    url("alphaImage.png") match-source,
     linear-gradient(to right, black, transparent) match-source,
     radial-gradient(circle, white 50%, transparent 75%) match-source,
     none match-source,
-    url(#svg-mask) match-source;
+    url("#svg-mask") match-source;
 }
 ```
 
-The first mask layer, `url(alphaImage.png)`, references an image. As this isn't a `<mask>` element within an `<svg>`, the `mask-mode` resolves to `alpha`, with the opaque parts of this image making the corresponding parts of the element visible, while the transparent or semi-transparent parts are invisible or partially visible.
+The first mask layer, `url("alphaImage.png")`, references an image. As this isn't a `<mask>` element within an `<svg>`, the `mask-mode` resolves to `alpha`, with the opaque parts of this image making the corresponding parts of the element visible, while the transparent or semi-transparent parts are invisible or partially visible.
 
 The `linear-gradient(to right, black, transparent)` is the second mask layer and `radial-gradient(circle, white 50%, transparent 75%)` is the third. Again, these aren't `<mask>` elements, so the `match-source` value resolves to `alpha`. The masking effect of these layers is determined by the [opaqueness of the gradient mask](/en-US/docs/Web/CSS/CSS_masking/Masking#opaqueness_versus_transparency) by default.
 
@@ -195,8 +195,8 @@ If we don't declare the `mask-mode` property at all, and allow it default to `ma
 ```css
 .masked-element {
   mask-image:
-    url(alphaImage.png), linear-gradient(to right, black, transparent),
-    radial-gradient(circle, white 50%, transparent 75%), none, url(#svg-mask);
+    url("alphaImage.png"), linear-gradient(to right, black, transparent),
+    radial-gradient(circle, white 50%, transparent 75%), none, url("#svg-mask");
   mask-mode: alpha, alpha, alpha, match-source, luminance;
 }
 ```
@@ -206,11 +206,11 @@ or, using the `mask` shorthand:
 ```css
 .masked-element {
   mask:
-    url(alphaImage.png) alpha,
+    url("alphaImage.png") alpha,
     linear-gradient(to right, black, transparent) alpha,
     radial-gradient(circle, white 50%, transparent 75%) alpha,
     none match-source,
-    url(#svg-mask) luminance;
+    url("#svg-mask") luminance;
 }
 ```
 
@@ -279,7 +279,7 @@ img {
 
 ```css live-sample___position live-sample___position_no-repeat
 img {
-  mask-image: url(https://mdn.github.io/shared-assets/images/examples/mask-star.svg);
+  mask-image: url("https://mdn.github.io/shared-assets/images/examples/mask-star.svg");
 }
 .keywords img {
   mask-position: bottom right;
@@ -327,8 +327,8 @@ If we don't explicitly set the `mask-position` property, it will default to `0% 
 ```css
 .masked-element {
   mask-image:
-    url(alphaImage.png), linear-gradient(to right, black, transparent),
-    radial-gradient(circle, white 50%, transparent 75%), none, url(#svg-mask);
+    url("alphaImage.png"), linear-gradient(to right, black, transparent),
+    radial-gradient(circle, white 50%, transparent 75%), none, url("#svg-mask");
   mask-mode: match-source;
   mask-position: 0% 0%;
 }
@@ -339,11 +339,11 @@ or, expanding on the example using the `mask` shorthand:
 ```css
 .masked-element {
   mask:
-    url(alphaImage.png) 0% 0% match-source,
+    url("alphaImage.png") 0% 0% match-source,
     linear-gradient(to right, black, transparent) 0% 0% match-source,
     radial-gradient(circle, white 50%, transparent 75%) 0% 0% match-source,
     none 0% 0% match-source,
-    url(#svg-mask) 0% 0% match-source;
+    url("#svg-mask") 0% 0% match-source;
 }
 ```
 
@@ -394,7 +394,7 @@ In this example, the `mask-position` places the initial mask in the top left cor
 
 ```css live-sample___origin live-sample___clip
 img {
-  mask-image: url(https://mdn.github.io/shared-assets/images/examples/mask-star.svg);
+  mask-image: url("https://mdn.github.io/shared-assets/images/examples/mask-star.svg");
   mask-position: top left;
   padding: 15px;
   border: 15px solid;
@@ -422,8 +422,8 @@ Continuing with the `masked-element` example, if we don't explicitly set the `ma
 ```css
 .masked-element {
   mask-image:
-    url(alphaImage.png), linear-gradient(to right, black, transparent),
-    radial-gradient(circle, white 50%, transparent 75%), none, url(#svg-mask);
+    url("alphaImage.png"), linear-gradient(to right, black, transparent),
+    radial-gradient(circle, white 50%, transparent 75%), none, url("#svg-mask");
   mask-mode: match-source;
   mask-position: 0% 0%;
   mask-origin: border-box;
@@ -435,12 +435,12 @@ or, expanding on the example using the `mask` shorthand:
 ```css
 .masked-element {
   mask:
-    url(alphaImage.png) 0% 0% border-box match-source,
+    url("alphaImage.png") 0% 0% border-box match-source,
     linear-gradient(to right, black, transparent) 0% 0% border-box match-source,
     radial-gradient(circle, white 50%, transparent 75%) 0% 0% border-box
       match-source,
     none 0% 0% border-box match-source,
-    url(#svg-mask) 0% 0% border-box match-source;
+    url("#svg-mask") 0% 0% border-box match-source;
 }
 ```
 
@@ -517,8 +517,8 @@ Continuing with the `masked-element` example, if we don't explicitly set the `ma
 ```css
 .masked-element {
   mask-image:
-    url(alphaImage.png), linear-gradient(to right, black, transparent),
-    radial-gradient(circle, white 50%, transparent 75%), none, url(#svg-mask);
+    url("alphaImage.png"), linear-gradient(to right, black, transparent),
+    radial-gradient(circle, white 50%, transparent 75%), none, url("#svg-mask");
   mask-mode: match-source;
   mask-position: 0% 0%;
   mask-origin: border-box;
@@ -531,13 +531,13 @@ or, expanding on the example using the `mask` shorthand:
 ```css
 .masked-element {
   mask:
-    url(alphaImage.png) 0% 0% border-box border-box match-source,
+    url("alphaImage.png") 0% 0% border-box border-box match-source,
     linear-gradient(to right, black, transparent) 0% 0% border-box border-box
       match-source,
     radial-gradient(circle, white 50%, transparent 75%) 0% 0% border-box
       border-box match-source,
     none 0% 0% border-box border-box match-source,
-    url(#svg-mask) 0% 0% border-box border-box match-source;
+    url("#svg-mask") 0% 0% border-box border-box match-source;
 }
 ```
 
@@ -590,7 +590,7 @@ With `cover`, `contain`, and `<percentage>` values, the size is relative to the 
 
 ```css hidden live-sample___size
 img {
-  mask-image: url(https://mdn.github.io/shared-assets/images/examples/mask-star.svg);
+  mask-image: url("https://mdn.github.io/shared-assets/images/examples/mask-star.svg");
   mask-position: top left;
   padding: 15px;
   border: 15px solid;
@@ -630,8 +630,8 @@ Continuing with the `masked-element` example, if we don't explicitly set the `ma
 ```css
 .masked-element {
   mask-image:
-    url(alphaImage.png), linear-gradient(to right, black, transparent),
-    radial-gradient(circle, white 50%, transparent 75%), none, url(#svg-mask);
+    url("alphaImage.png"), linear-gradient(to right, black, transparent),
+    radial-gradient(circle, white 50%, transparent 75%), none, url("#svg-mask");
   mask-mode: match-source;
   mask-position: 0% 0%;
   mask-origin: border-box;
@@ -645,13 +645,13 @@ or, expanding on the example using the `mask` shorthand, with the `mask-size` co
 ```css
 .masked-element {
   mask:
-    url(alphaImage.png) 0% 0% / auto border-box border-box match-source,
+    url("alphaImage.png") 0% 0% / auto border-box border-box match-source,
     linear-gradient(to right, black, transparent) 0% 0% / auto border-box
       border-box match-source,
     radial-gradient(circle, white 50%, transparent 75%) 0% 0% / auto border-box
       border-box match-source,
     none 0% 0% / auto border-box border-box match-source,
-    url(#svg-mask) 0% 0% / auto border-box border-box match-source;
+    url("#svg-mask") 0% 0% / auto border-box border-box match-source;
 }
 ```
 
@@ -666,8 +666,8 @@ Continuing with the `masked-element` example, if we don't explicitly set the `ma
 ```css
 .masked-element {
   mask-image:
-    url(alphaImage.png), linear-gradient(to right, black, transparent),
-    radial-gradient(circle, white 50%, transparent 75%), none, url(#svg-mask);
+    url("alphaImage.png"), linear-gradient(to right, black, transparent),
+    radial-gradient(circle, white 50%, transparent 75%), none, url("#svg-mask");
   mask-mode: match-source;
   mask-position: 0% 0%;
   mask-origin: border-box;
@@ -682,13 +682,13 @@ or, expanding on the example using the `mask` shorthand:
 ```css
 .masked-element {
   mask:
-    url(alphaImage.png) 0% 0% / auto repeat border-box border-box match-source,
+    url("alphaImage.png") 0% 0% / auto repeat border-box border-box match-source,
     linear-gradient(to right, black, transparent) 0% 0% / auto repeat border-box
       border-box match-source,
     radial-gradient(circle, white 50%, transparent 75%) 0% 0% / auto repeat
       border-box border-box match-source,
     none 0% 0% / auto repeat border-box border-box match-source,
-    url(#svg-mask) 0% 0% / auto repeat border-box border-box match-source;
+    url("#svg-mask") 0% 0% / auto repeat border-box border-box match-source;
 }
 ```
 
@@ -730,7 +730,7 @@ img {
       #f005 20px 40px,
       transparent 40px 60px
     ),
-    url(https://mdn.github.io/shared-assets/images/examples/mask-star.svg);
+    url("https://mdn.github.io/shared-assets/images/examples/mask-star.svg");
 }
 ```
 
@@ -772,7 +772,7 @@ The `mask-composite` property is only relevant in cases with two or more mask la
 ```css live-sample___composite3
 img {
   mask-image:
-    url(https://mdn.github.io/shared-assets/images/examples/mask-star.svg),
+    url("https://mdn.github.io/shared-assets/images/examples/mask-star.svg"),
     repeating-linear-gradient(
       to bottom right,
       #f00 0 20px,
@@ -813,11 +813,11 @@ If we reverse the order of the mask layers, we can also get very different resul
       #f005 20px 40px,
       transparent 40px 60px
     ),
-    url(https://mdn.github.io/shared-assets/images/examples/mask-star.svg);
+    url("https://mdn.github.io/shared-assets/images/examples/mask-star.svg");
 }
 .starFirst {
   mask-image:
-    url(https://mdn.github.io/shared-assets/images/examples/mask-star.svg),
+    url("https://mdn.github.io/shared-assets/images/examples/mask-star.svg"),
     repeating-linear-gradient(
       to bottom right,
       #f00 0 20px,
@@ -840,8 +840,8 @@ Continuing with the `masked-element` example, if we don't explicitly set the `ma
 ```css
 .masked-element {
   mask-image:
-    url(alphaImage.png), linear-gradient(to right, black, transparent),
-    radial-gradient(circle, white 50%, transparent 75%), none, url(#svg-mask);
+    url("alphaImage.png"), linear-gradient(to right, black, transparent),
+    radial-gradient(circle, white 50%, transparent 75%), none, url("#svg-mask");
   mask-mode: match-source;
   mask-position: 0% 0%;
   mask-origin: border-box;
@@ -859,14 +859,14 @@ Like we saw with all the other component properties, we could have used the `mas
 ```css
 .masked-element {
   mask:
-    url(alphaImage.png) 0% 0% / auto repeat border-box border-box add
+    url("alphaImage.png") 0% 0% / auto repeat border-box border-box add
       match-source,
     linear-gradient(to right, black, transparent) 0% 0% / auto repeat border-box
       border-box add match-source,
     radial-gradient(circle, white 50%, transparent 75%) 0% 0% / auto repeat
       border-box border-box add match-source,
     none 0% 0% / auto repeat border-box border-box add match-source,
-    url(#svg-mask) 0% 0% / auto repeat border-box border-box add match-source;
+    url("#svg-mask") 0% 0% / auto repeat border-box border-box add match-source;
 }
 ```
 

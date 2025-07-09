@@ -18,7 +18,7 @@ For many marker-supporting shapes, the first and last vertices are the same poin
 
 ```css
 marker-end: none;
-marker-end: url(markers.svg#arrow);
+marker-end: url("markers.svg#arrow");
 
 /* Global values */
 marker-end: inherit;
@@ -79,7 +79,7 @@ svg {
 
 ```css
 polyline#test {
-  marker-end: url(#triangle);
+  marker-end: url("#triangle");
 }
 ```
 

@@ -66,12 +66,12 @@ The `-webkit-mask-position-y` CSS property sets the initial vertical position of
 
 ```css
 .exampleOne {
-  -webkit-mask-image: url(mask.png);
+  -webkit-mask-image: url("mask.png");
   -webkit-mask-position-y: bottom;
 }
 
 .exampleTwo {
-  -webkit-mask-image: url(mask.png);
+  -webkit-mask-image: url("mask.png");
   -webkit-mask-position-y: 25%;
 }
 ```
