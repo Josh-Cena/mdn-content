@@ -65,7 +65,7 @@ client.addEventListener("timeout", () => {
 
 You can use the `timeout` event to detect an upload that stopped because it was too slow. For a complete code example that uploads a file and displays a progress bar, see the main {{domxref("XMLHttpRequestUpload")}} page.
 
-The timeout is set on the {{domxref("XMLHttpRequest")}} object using the {{domxref("XMLHttpRequestU.timeout")}} property.
+The timeout is set on the {{domxref("XMLHttpRequest")}} object using the {{domxref("XMLHttpRequest.timeout")}} property.
 
 ```js
 // In case of an timeout we hide the progress bar
