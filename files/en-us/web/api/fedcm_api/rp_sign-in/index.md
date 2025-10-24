@@ -127,7 +127,7 @@ The default value for `mode` is `passive`. If `mode` is not set, or is set expli
 
 If `mode` is set to `active`, the browser requires the sign-in flow to be initiated via a user action such as clicking a button ({{glossary("transient activation")}} is required), and the `providers` object can only have a length of `1`, otherwise the `get()` promise will reject. This mode is typically used when the RP wishes to provide a separate button for each IdP choice. When the user clicks one of those buttons, a simplified dialog window appears that just requires them to enter the credentials for that account.
 
-See [FedCM UI modes](https://privacysandbox.google.com/cookies/fedcm/why#fedcm_ui_modes) on privacysandbox.google.com for an example of how the different UI modes are presented in Google Chrome.
+See [FedCM UI modes](https://developer.chrome.com/docs/identity/fedcm/overview#fedcm_ui_modes) on privacysandbox.google.com for an example of how the different UI modes are presented in Google Chrome.
 
 ## Auto-reauthentication
 
@@ -193,4 +193,4 @@ For a `disconnect()` call to work, the IdP must include a [`disconnect_endpoint`
 
 ## See also
 
-- [Federated Credential Management API](https://privacysandbox.google.com/cookies/fedcm) on privacysandbox.google.com (2023)
+- [Federated Credential Management API](https://developer.chrome.com/docs/identity/fedcm/overview) on privacysandbox.google.com (2023)
