@@ -1,0 +1,58 @@
+interface mixin DocumentOrShadowRoot {
+  readonly attribute CustomElementRegistry? customElementRegistry;
+};
+Document includes DocumentOrShadowRoot;
+ShadowRoot includes DocumentOrShadowRoot;
+
+interface mixin Slottable {
+  readonly attribute HTMLSlotElement? assignedSlot;
+};
+Element includes Slottable;
+Text includes Slottable;
+
+[Exposed=Window]
+interface ShadowRoot : DocumentFragment {
+  readonly attribute ShadowRootMode mode;
+  readonly attribute boolean delegatesFocus;
+  readonly attribute SlotAssignmentMode slotAssignment;
+  readonly attribute boolean clonable;
+  readonly attribute boolean serializable;
+  readonly attribute Element host;
+
+  attribute EventHandler onslotchange;
+};
+
+enum ShadowRootMode { "open", "closed" };
+enum SlotAssignmentMode { "manual", "named" };
+
+dictionary GetRootNodeOptions {
+  boolean composed = false;
+};
+
+[Exposed=Window]
+interface Element : Node {
+  [CEReactions, Unscopable] attribute DOMString slot;
+
+  ShadowRoot attachShadow(ShadowRootInit init);
+  readonly attribute ShadowRoot? shadowRoot;
+
+  readonly attribute CustomElementRegistry? customElementRegistry;
+};
+
+dictionary ShadowRootInit {
+  required ShadowRootMode mode;
+  boolean delegatesFocus = false;
+  SlotAssignmentMode slotAssignment = "named";
+  boolean clonable = false;
+  boolean serializable = false;
+  CustomElementRegistry? customElementRegistry = null;
+};
+
+dictionary ElementCreationOptions {
+  CustomElementRegistry customElementRegistry;
+  DOMString is;
+};
+
+dictionary ImportNodeOptions {
+  CustomElementRegistry customElementRegistry;
+};

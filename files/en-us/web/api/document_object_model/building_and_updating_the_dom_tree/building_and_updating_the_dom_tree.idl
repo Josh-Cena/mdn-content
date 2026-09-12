@@ -1,0 +1,151 @@
+interface mixin ParentNode {
+  [CEReactions, Unscopable] undefined prepend((Node or DOMString)... nodes);
+  [CEReactions, Unscopable] undefined append((Node or DOMString)... nodes);
+  [CEReactions, Unscopable] undefined replaceChildren((Node or DOMString)... nodes);
+
+  [CEReactions] undefined moveBefore(Node node, Node? child);
+};
+Document includes ParentNode;
+DocumentFragment includes ParentNode;
+Element includes ParentNode;
+
+interface mixin ChildNode {
+  [CEReactions, Unscopable] undefined before((Node or DOMString)... nodes);
+  [CEReactions, Unscopable] undefined after((Node or DOMString)... nodes);
+  [CEReactions, Unscopable] undefined replaceWith((Node or DOMString)... nodes);
+  [CEReactions, Unscopable] undefined remove();
+};
+DocumentType includes ChildNode;
+Element includes ChildNode;
+CharacterData includes ChildNode;
+
+[Exposed=Window]
+interface Node : EventTarget {
+  readonly attribute boolean isConnected;
+  readonly attribute Document? ownerDocument;
+
+  [CEReactions] undefined normalize();
+
+  [CEReactions, NewObject] Node cloneNode(optional boolean subtree = false);
+
+  [CEReactions] Node insertBefore(Node node, Node? child);
+  [CEReactions] Node appendChild(Node node);
+  [CEReactions] Node replaceChild(Node node, Node child);
+  [CEReactions] Node removeChild(Node child);
+};
+
+[Exposed=Window]
+interface Document : Node {
+  constructor();
+  [SameObject] readonly attribute DOMImplementation implementation;
+
+  [CEReactions, NewObject] Element createElement(DOMString localName, optional (DOMString or ElementCreationOptions) options = {});
+  [NewObject] DocumentFragment createDocumentFragment();
+  [NewObject] Text createTextNode(DOMString data);
+  [NewObject] CDATASection createCDATASection(DOMString data);
+  [NewObject] Comment createComment(DOMString data);
+  [NewObject] ProcessingInstruction createProcessingInstruction(DOMString target, DOMString data);
+
+  [CEReactions, NewObject] Node importNode(Node node, optional (boolean or ImportNodeOptions) options = false);
+  [CEReactions] Node adoptNode(Node node);
+
+  [NewObject] Attr createAttribute(DOMString localName);
+};
+
+[Exposed=Window]
+interface XMLDocument : Document {};
+
+dictionary ImportNodeOptions {
+  boolean selfOnly = false;
+};
+
+[Exposed=Window]
+interface DOMImplementation {
+  [NewObject] DocumentType createDocumentType(DOMString name, DOMString publicId, DOMString systemId);
+  [NewObject] XMLDocument createDocument(DOMString? namespace, [LegacyNullToEmptyString] DOMString qualifiedName, optional DocumentType? doctype = null);
+  [NewObject] Document createHTMLDocument(optional DOMString title);
+
+  boolean hasFeature(); // historical; always returns true
+};
+
+[Exposed=Window]
+interface DocumentFragment : Node {
+  constructor();
+};
+
+[Exposed=Window]
+interface Element : Node {
+  [CEReactions] undefined setAttribute(DOMString qualifiedName, (TrustedType or DOMString) value);
+  [CEReactions] undefined removeAttribute(DOMString qualifiedName);
+  [CEReactions] boolean toggleAttribute(DOMString qualifiedName, optional boolean force);
+
+  [CEReactions] Attr? setAttributeNode(Attr attr);
+  [CEReactions] Attr removeAttributeNode(Attr attr);
+
+  [CEReactions] Element? insertAdjacentElement(DOMString where, Element element); // legacy
+  undefined insertAdjacentText(DOMString where, DOMString data); // legacy
+};
+
+[Exposed=Window]
+interface CharacterData : Node {
+  undefined appendData(DOMString data);
+  undefined insertData(unsigned long offset, DOMString data);
+  undefined deleteData(unsigned long offset, unsigned long count);
+  undefined replaceData(unsigned long offset, unsigned long count, DOMString data);
+};
+
+[Exposed=Window]
+interface Text : CharacterData {
+  constructor(optional DOMString data = "");
+
+  [NewObject] Text splitText(unsigned long offset);
+  readonly attribute DOMString wholeText;
+};
+
+[Exposed=Window]
+interface ProcessingInstruction : CharacterData {
+  constructor(DOMString target, optional DOMString data = "");
+
+  // TODO: new
+  undefined setAttribute(DOMString name, DOMString value);
+  undefined removeAttribute(DOMString name);
+  boolean toggleAttribute(DOMString name, optional boolean force);
+};
+[Exposed=Window]
+interface Comment : CharacterData {
+  constructor(optional DOMString data = "");
+};
+
+[Exposed=Window]
+interface MutationObserver {
+  constructor(MutationCallback callback);
+
+  undefined observe(Node target, optional MutationObserverInit options = {});
+  undefined disconnect();
+  sequence<MutationRecord> takeRecords();
+};
+
+callback MutationCallback = undefined (sequence<MutationRecord> mutations, MutationObserver observer);
+
+dictionary MutationObserverInit {
+  boolean childList = false;
+  boolean attributes;
+  boolean characterData;
+  boolean subtree = false;
+  boolean attributeOldValue;
+  boolean characterDataOldValue;
+  sequence<DOMString> attributeFilter;
+};
+
+[Exposed=Window]
+interface MutationRecord {
+  readonly attribute DOMString type;
+  [SameObject] readonly attribute Node target;
+  [SameObject] readonly attribute NodeList addedNodes;
+  [SameObject] readonly attribute NodeList removedNodes;
+  readonly attribute Node? previousSibling;
+  readonly attribute Node? nextSibling;
+  readonly attribute DOMString? attributeName;
+  readonly attribute DOMString? attributeNamespace;
+  readonly attribute DOMString? oldValue;
+};

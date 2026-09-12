@@ -1,0 +1,47 @@
+[Exposed=Window]
+interface Node : EventTarget {
+  DOMString? lookupPrefix(DOMString? namespace);
+  DOMString? lookupNamespaceURI(DOMString? prefix);
+  boolean isDefaultNamespace(DOMString? namespace);
+};
+
+[Exposed=Window]
+interface Document : Node {
+  [CEReactions, NewObject] Element createElementNS(DOMString? namespace, DOMString qualifiedName, optional (DOMString or ElementCreationOptions) options = {});
+
+  [NewObject] Attr createAttributeNS(DOMString? namespace, DOMString qualifiedName);
+
+  HTMLCollection getElementsByTagNameNS(DOMString? namespace, DOMString localName);
+};
+
+[Exposed=Window]
+interface Element : Node {
+  readonly attribute DOMString? namespaceURI;
+  readonly attribute DOMString? prefix;
+  readonly attribute DOMString localName;
+
+  DOMString? getAttributeNS(DOMString? namespace, DOMString localName);
+  [CEReactions] undefined setAttributeNS(DOMString? namespace, DOMString qualifiedName, (TrustedType or DOMString) value);
+  [CEReactions] undefined removeAttributeNS(DOMString? namespace, DOMString localName);
+  boolean hasAttributeNS(DOMString? namespace, DOMString localName);
+
+  Attr? getAttributeNodeNS(DOMString? namespace, DOMString localName);
+  [CEReactions] Attr? setAttributeNodeNS(Attr attr);
+
+  HTMLCollection getElementsByTagNameNS(DOMString? namespace, DOMString localName);
+};
+
+[Exposed=Window,
+ LegacyUnenumerableNamedProperties]
+interface NamedNodeMap {
+  Attr? getNamedItemNS(DOMString? namespace, DOMString localName);
+  [CEReactions] Attr? setNamedItemNS(Attr attr);
+  [CEReactions] Attr removeNamedItemNS(DOMString? namespace, DOMString localName);
+};
+
+[Exposed=Window]
+interface Attr : Node {
+  readonly attribute DOMString? namespaceURI;
+  readonly attribute DOMString? prefix;
+  readonly attribute DOMString localName;
+};
