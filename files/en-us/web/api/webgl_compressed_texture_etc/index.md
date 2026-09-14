@@ -69,9 +69,8 @@ gl.compressedTexImage2D(
 
 {{Compat}}
 
-### Compatibility notes
-
-- This extension was named `WEBGL_compressed_texture_es3` from Firefox 46 to Firefox 51 and used to be available on the WebGL 2 context by default – this is not the case anymore. You have to enable it on both, WebGL 1 and WebGL 2 contexts, in order to use it.
+> [!NOTE]
+> This extension was named `WEBGL_compressed_texture_es3` from Firefox 46 to Firefox 51 and used to be available on the WebGL 2 context by default – this is not the case anymore. You have to enable it on both, WebGL 1 and WebGL 2 contexts, in order to use it.
 
 ## See also
 

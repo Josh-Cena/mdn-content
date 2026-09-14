@@ -56,16 +56,13 @@ For an example of the ended event in use, see our [audio-buffer example on GitHu
 
 {{Compat}}
 
-## Related events
-
-- [audioprocess](/en-US/docs/Web/API/ScriptProcessorNode/audioprocess_event)
-- [complete](/en-US/docs/Web/API/OfflineAudioContext/complete_event)
-
 ## See also
 
 - {{domxref("HTMLAudioElement")}}
 - {{domxref("HTMLVideoElement")}}
 - {{HTMLElement("audio")}}
 - {{HTMLElement("video")}}
-- The HTMLMediaElement {{domxref("HTMLMediaElement.ended_event", 'ended')}} event
-- The MediaStreamTrack {{domxref("MediaStreamTrack.ended_event", 'ended')}} event
+- The `HTMLMediaElement` {{domxref("HTMLMediaElement.ended_event", 'ended')}} event
+- The `MediaStreamTrack` {{domxref("MediaStreamTrack.ended_event", 'ended')}} event
+- The `ScriptProcessorNode` [`audioprocess`](/en-US/docs/Web/API/ScriptProcessorNode/audioprocess_event) event
+- The `OfflineAudioContext` [`complete`](/en-US/docs/Web/API/OfflineAudioContext/complete_event) event

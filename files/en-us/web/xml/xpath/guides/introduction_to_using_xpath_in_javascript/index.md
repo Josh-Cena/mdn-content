@@ -356,8 +356,3 @@ let thisItemEl = thisLevel.iterateNext();
 
 - [XPath](/en-US/docs/Web/XML/XPath)
 - [XML Path Language](https://www.xml.com/pub/a/2000/08/holman/index.html?page=2#xpath-info) from _[What is XSLT?](https://www.xml.com/pub/a/2000/08/holman/)_ by G. Ken Holman
-
-## Original Document Information
-
-- Based upon an original document by James Graham.
-- Other Contributors: James Thompson.

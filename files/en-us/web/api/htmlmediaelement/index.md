@@ -206,13 +206,8 @@ Listen to these events using {{domxref("EventTarget.addEventListener", "addEvent
 
 ## See also
 
-### References
-
 - {{HTMLElement("video")}} and {{HTMLElement("audio")}} HTML elements
 - {{domxref("HTMLVideoElement")}} and {{domxref("HTMLAudioElement")}} interfaces, derived from `HTMLMediaElement`
-
-### Guides
-
 - [Web media technologies](/en-US/docs/Web/Media)
 - Learning area: [HTML video and audio](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)
 - [Media type and format guide](/en-US/docs/Web/Media/Guides/Formats)

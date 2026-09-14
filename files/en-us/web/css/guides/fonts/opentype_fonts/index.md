@@ -1157,21 +1157,10 @@ For example, small caps can be set several ways, but if you want to ensure that 
 
 ## See also
 
-### Demos of CSS OpenType features in CSS
-
 - [The Complete CSS Demo for OpenType Features](https://sparanoid.com/lab/opentype-features/)
-
-### Web font analysis tools
-
 - [Wakamai Fondue](https://wakamaifondue.com/)
 - [Axis Praxis](https://www.axis-praxis.org/)
-
-### W3C Specifications
-
 - [Font Feature Properties in CSS Fonts Module Level 3](https://drafts.csswg.org/css-fonts-3/#font-rend-props)
 - [font-variant-alternatives in CSS Fonts Module Level 4](https://drafts.csswg.org/css-fonts-4/#propdef-font-variant-alternates)
-
-### Other resources
-
 - [Using OpenType features](https://helpx.adobe.com/fonts/web/language-support-and-opentype-features/use-open-type-features.html) by Tim Brown, Head of Typography, Adobe
 - [Adobe's Syntax for OpenType features in CSS](https://helpx.adobe.com/fonts/web/language-support-and-opentype-features/open-type-syntax.html)

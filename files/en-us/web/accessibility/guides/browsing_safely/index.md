@@ -78,6 +78,10 @@ Most Operating Systems have a way to let the user make an adjustment on the work
 
 ![Shows Windows 10 Accessibility Settings for GrayScale](colorfiltersgrayscaleinwindows.png)
 
+## Credits
+
+Many, many thanks to Eric Eggert from [Knowbility;](https://knowbility.org/) for his discussions and huge help on this topic.
+
 ## See also
 
 - [Accessibility](/en-US/docs/Web/Accessibility)
@@ -85,7 +89,3 @@ Most Operating Systems have a way to let the user make an adjustment on the work
 - [Web accessibility for seizures and physical reactions](/en-US/docs/Web/Accessibility/Guides/Seizure_disorders)
 - [Color vision simulation](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/simulation/index.html)
 - Discussion: "[What is the "grayscale" setting for in accessibility options?](https://ask.metafilter.com/312049/What-is-the-grayscale-setting-for-in-accessibility-options)"
-
-### Contributors
-
-Many, many thanks to Eric Eggert from [Knowbility](https://knowbility.org/) for his discussions and huge help on this topic.

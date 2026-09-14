@@ -11,7 +11,4 @@ sidebar: glossarysidebar
 
 - [STUN](https://en.wikipedia.org/wiki/STUN) on Wikipedia
 - [WebRTC protocols](/en-US/docs/Web/API/WebRTC_API/Protocols)
-
-### Technical reference
-
-- [Specification](https://datatracker.ietf.org/doc/html/rfc5389)
+- [RFC 5389](https://datatracker.ietf.org/doc/html/rfc5389)

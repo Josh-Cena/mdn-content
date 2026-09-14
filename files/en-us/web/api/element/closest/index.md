@@ -72,13 +72,6 @@ console.log(el.closest(":not(div)")); // <article>
 
 {{Compat}}
 
-### Compatibility notes
-
-- In Edge 15-18 `document.createElement(tagName).closest(tagName)` will
-  return `null` if the element is not first connected (directly or
-  indirectly) to the context object, for example the {{domxref("Document")}} object in
-  the case of the normal DOM.
-
 ## See also
 
 - [CSS selectors](/en-US/docs/Web/CSS/Guides/Selectors) module

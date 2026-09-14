@@ -180,12 +180,12 @@ The main parts of the URL are:
 > [!NOTE]
 > There are a lot more components that can appear in URLs. See [What is a URL?](/en-US/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL) for more details.
 
+## Credits
+
+Street photo: [Street composing](https://www.pinterest.com/pin/400538960580676851/), by [Kevin Digga](https://www.pinterest.com/kevindigga/).
+
 ## See also
 
 - [How the Internet works](/en-US/docs/Learn_web_development/Howto/Web_mechanics/How_does_the_Internet_work)
-
-## Credit
-
-Street photo: [Street composing](https://www.pinterest.com/pin/400538960580676851/), by [Kevin Digga](https://www.pinterest.com/kevindigga/).
 
 {{NextMenu("Learn_web_development/Getting_started/Web_standards/The_web_standards_model", "Learn_web_development/Getting_started/Web_standards")}}

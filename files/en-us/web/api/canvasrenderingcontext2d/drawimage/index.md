@@ -19,8 +19,6 @@ drawImage(image, dx, dy, dWidth, dHeight)
 drawImage(image, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight)
 ```
 
-![drawImage](canvas_drawimage.jpg)
-
 ### Parameters
 
 - `image`
@@ -78,6 +76,23 @@ None ({{jsxref("undefined")}}).
   - : Thrown when the image has no image data or if the canvas or source rectangle width or height is zero.
 - `TypeMismatchError` {{domxref("DOMException")}}
   - : Thrown when a `null` or `undefined` image is passed as parameter.
+
+## Description
+
+The parameters' meanings can be illustrated with the following diagram:
+
+![drawImage](canvas_drawimage.jpg)
+
+- `drawImage()` only works correctly on an {{domxref("HTMLVideoElement")}}
+  when its {{domxref("HTMLMediaElement.readyState")}} is greater than 1 (i.e.,
+  `seek` event fired after setting the `currentTime`
+  property).
+- `drawImage()` will always use the source element's _intrinsic size in
+  CSS pixels_ when drawing, cropping, and/or scaling.
+- In some older browser versions, `drawImage()` will ignore all EXIF
+  metadata in images, including the orientation. This behavior is especially troublesome
+  on iOS devices. You should detect the orientation yourself and use
+  `rotate()` to make it right.
 
 ## Examples
 
@@ -182,19 +197,6 @@ function drawImageActualSize() {
 ## Browser compatibility
 
 {{Compat}}
-
-## Notes
-
-- `drawImage()` only works correctly on an {{domxref("HTMLVideoElement")}}
-  when its {{domxref("HTMLMediaElement.readyState")}} is greater than 1 (i.e.,
-  **seek** event fired after setting the `currentTime`
-  property).
-- `drawImage()` will always use the source element's _intrinsic size in
-  CSS pixels_ when drawing, cropping, and/or scaling.
-- In some older browser versions, `drawImage()` will ignore all EXIF
-  metadata in images, including the Orientation. This behavior is especially troublesome
-  on iOS devices. You should detect the Orientation yourself and use
-  `rotate()` to make it right.
 
 ## See also
 

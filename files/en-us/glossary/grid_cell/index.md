@@ -57,14 +57,9 @@ In the example we have created a three column track grid. The five items are pla
 
 ## See also
 
-### Property reference
-
 - {{cssxref("grid-template-columns")}}
 - {{cssxref("grid-template-rows")}}
 - {{cssxref("grid-auto-rows")}}
 - {{cssxref("grid-auto-columns")}}
-
-### Further reading
-
 - [Basic concepts of grid layout](/en-US/docs/Web/CSS/Guides/Grid_layout/Basic_concepts)
 - [Definition of grid cells in the CSS grid layout specification](https://drafts.csswg.org/css-grid/#grid-track-concept)

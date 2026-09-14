@@ -124,13 +124,6 @@ canvas.addEventListener("mousemove", (event) => {
 
 {{Compat}}
 
-### Gecko-specific note
-
-- Prior to Gecko 7.0 (Firefox 7.0 / Thunderbird 7.0 / SeaMonkey 2.4), this method
-  incorrectly failed to multiply the specified point's coordinates by the current
-  transformation matrix before comparing it to the path. Now this method works correctly
-  even if the context is rotated, scaled, or otherwise transformed.
-
 ## See also
 
 - The interface defining this method: {{domxref("CanvasRenderingContext2D")}}

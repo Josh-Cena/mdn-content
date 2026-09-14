@@ -14,6 +14,10 @@ The focused element is the element that will receive keyboard and similar events
 By default the browser will scroll the element into view after focusing it, and it may also provide visible indication of the focused element (typically by displaying a "focus ring" around the element).
 Parameter options are provided to disable the default scrolling and force visible indication on elements.
 
+- If you call `HTMLElement.focus()` from a `mousedown` event handler, you must call `event.preventDefault()` to keep the focus from leaving the `HTMLElement`.
+- Behavior of the focus in relation to different HTML features like [`tabindex`](/en-US/docs/Web/HTML/Reference/Global_attributes/tabindex) or {{Glossary("shadow tree", "shadow dom")}}, which previously remained under-specified, were updated in October 2019.
+  See the [WHATWG blog](https://blog.whatwg.org/focusing-on-focus) for more information.
+
 ## Syntax
 
 ```js-nolint
@@ -161,12 +165,6 @@ Selecting the second button set's the focus, but scrolling is disabled.
 ## Specifications
 
 {{Specifications}}
-
-## Notes
-
-- If you call `HTMLElement.focus()` from a mousedown event handler, you must call `event.preventDefault()` to keep the focus from leaving the `HTMLElement`
-- Behavior of the focus in relation to different HTML features like [`tabindex`](/en-US/docs/Web/HTML/Reference/Global_attributes/tabindex) or {{Glossary("shadow tree", "shadow dom")}}, which previously remained under-specified, were updated in October 2019.
-  See the [WHATWG blog](https://blog.whatwg.org/focusing-on-focus) for more information.
 
 ## Browser compatibility
 

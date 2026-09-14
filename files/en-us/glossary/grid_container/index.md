@@ -11,15 +11,10 @@ When an element becomes a grid container it establishes a **grid formatting cont
 
 ## See also
 
-### Property reference
-
 - {{cssxref("grid-template-columns")}}
 - {{cssxref("grid-template-rows")}}
 - {{cssxref("grid-auto-columns")}}
 - {{cssxref("grid-auto-rows")}}
 - {{cssxref("grid")}}
 - {{cssxref("grid-template")}}
-
-### Further reading
-
 - [Basic concepts of grid layout](/en-US/docs/Web/CSS/Guides/Grid_layout/Basic_concepts)

@@ -1144,9 +1144,6 @@ Here we have covered only the real basics of canvas — there is so much more to
 - [WebGL tutorial](/en-US/docs/Web/API/WebGL_API/Tutorial) — A series that teaches the basics of raw WebGL programming.
 - [Building up a basic demo with Three.js](/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js) — basic Three.js tutorial. We also have equivalent guides for [PlayCanvas](/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_PlayCanvas) or [Babylon.js](/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Babylon.js).
 - [Game development](/en-US/docs/Games) — the landing page for web games development on MDN. There are some really useful tutorials and techniques available here related to 2D and 3D canvas — see the Techniques and Tutorials menu options.
-
-## Examples
-
 - [Violent theremin](https://github.com/mdn/webaudio-examples/tree/main/violent-theremin) — Uses the Web Audio API to generate sound, and canvas to generate a pretty visualization to go along with it.
 - [Voice change-o-matic](https://github.com/mdn/webaudio-examples/tree/main/voice-change-o-matic) — Uses a canvas to visualize real-time audio data from the Web Audio API.
 

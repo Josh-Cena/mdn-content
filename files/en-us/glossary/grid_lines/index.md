@@ -160,8 +160,6 @@ The lines created in the _explicit grid_ can be named, by adding the name in squ
 
 ## See also
 
-### Property reference
-
 - {{cssxref("grid-template-columns")}}
 - {{cssxref("grid-template-rows")}}
 - {{cssxref("grid-column-start")}}
@@ -170,12 +168,8 @@ The lines created in the _explicit grid_ can be named, by adding the name in squ
 - {{cssxref("grid-row-start")}}
 - {{cssxref("grid-row-end")}}
 - {{cssxref("grid-row")}}
-
-### Further reading
-
-- CSS grid layout guides:
-  - [Basic concepts of grid layout](/en-US/docs/Web/CSS/Guides/Grid_layout/Basic_concepts)
-  - [Line-based placement with CSS grid](/en-US/docs/Web/CSS/Guides/Grid_layout/Line-based_placement)
-  - [Layout using named grid lines](/en-US/docs/Web/CSS/Guides/Grid_layout/Named_grid_lines)
-  - [CSS grids, logical values and writing modes](/en-US/docs/Web/CSS/Guides/Grid_layout/Logical_values_and_writing_modes)
+- [Basic concepts of grid layout](/en-US/docs/Web/CSS/Guides/Grid_layout/Basic_concepts)
+- [Line-based placement with CSS grid](/en-US/docs/Web/CSS/Guides/Grid_layout/Line-based_placement)
+- [Layout using named grid lines](/en-US/docs/Web/CSS/Guides/Grid_layout/Named_grid_lines)
+- [CSS grids, logical values and writing modes](/en-US/docs/Web/CSS/Guides/Grid_layout/Logical_values_and_writing_modes)
 - [Definition of grid lines in the CSS grid layout specification](https://drafts.csswg.org/css-grid/#grid-line-concept)

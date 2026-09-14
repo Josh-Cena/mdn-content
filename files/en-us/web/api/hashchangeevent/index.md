@@ -53,7 +53,7 @@ window.addEventListener("hashchange", locationHashChanged);
 
 {{Compat}}
 
-## Related events
+## See also
 
 - {{domxref("window.hashchange_event", "hashchange")}}
 - {{domxref("window.popstate_event", "popstate")}}

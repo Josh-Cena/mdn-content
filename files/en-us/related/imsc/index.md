@@ -125,6 +125,16 @@ In contrast to IMSC, which uses markup, WebVTT uses a combination of CSS and pla
 - [dash.js](https://github.com/Dash-Industry-Forum/dash.js)
   - : The reference player of the DASH Industry Forum with IMSC support.
 
+## Docs project team
+
+Team:
+
+- Dave Kneeland
+- Pierre-Anthony Lemieux
+- Andreas Tai
+
+If you want to get involved with documenting IMSC, please contact [Andreas Tai](mailto:tai@irt.de).
+
 ## Specifications
 
 - [TTML Profiles for Internet Media Subtitles and Captions 1.2](https://w3c.github.io/imsc/imsc1/spec/ttml-ww-profiles.html)
@@ -141,13 +151,3 @@ IMSC does not have native support in browsers at this current moment, but it can
   - : At the IMSC GitHub repository you can provide feedback on the specifications and file issues
 - [Web Video Text Tracks Format (WebVTT)](/en-US/docs/Web/API/WebVTT_API)
   - : WebVTT is another mechanism for implementing captions and subtitles on the web, which has some native support in browsers and some useful features.
-
-## Docs project team
-
-Team:
-
-- Dave Kneeland
-- Pierre-Anthony Lemieux
-- Andreas Tai
-
-If you want to get involved with documenting IMSC, please contact [Andreas Tai](mailto:tai@irt.de).

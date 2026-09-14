@@ -278,8 +278,6 @@ context.listener.setPosition(0, 0, 0);
 
 ## See also
 
-### Guides
-
 - [Manipulating Video Using Canvas](/en-US/docs/Web/API/Canvas_API/Manipulating_video_using_canvas)
 - [HTML playbackRate explained](/en-US/docs/Web/Media/Guides/Audio_and_video_delivery/WebAudio_playbackRate_explained)
 - [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
@@ -287,9 +285,6 @@ context.listener.setPosition(0, 0, 0);
 - [Using Video frames as a WebGL Texture](/en-US/docs/Web/API/WebGL_API/Tutorial/Animating_textures_in_WebGL#using_the_video_frames_as_a_texture) (You can also the [THREE.js](https://threejs.org/) WebGL library (and others) to [achieve this effect](https://stemkoski.github.io/Three.js/Video.html))
 - [Animating Textures in WebGL](/en-US/docs/Web/API/WebGL_API/Tutorial/Animating_textures_in_WebGL)
 - [Developing Game Audio with the Web Audio API (Room effects and filters) (2012)](https://web.dev/articles/webaudio-games#room_effects_and_filters)
-
-### Reference
-
 - The {{htmlelement("audio")}} and {{htmlelement("video")}} elements
 - The {{domxref("HTMLMediaElement")}} API
 - The {{htmlelement("canvas")}} element

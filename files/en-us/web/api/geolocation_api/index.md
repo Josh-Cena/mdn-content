@@ -72,6 +72,10 @@ Therefore, users must grant explicit permission via a prompt when either {{domxr
 The lifetime of a granted permission depends on the user agent, and may be time based, session based, or even permanent.
 The [Permissions API](/en-US/docs/Web/API/Permissions_API) `geolocation` permission can be used to test whether access to use location information is `granted`, `denied` or `prompt` (requires user acknowledgement of a prompt).
 
+## Availability
+
+As Wi-Fi-based locating is often provided by Google, the vanilla Geolocation API may be unavailable in China. You may use local third-party providers such as [Baidu](https://lbsyun.baidu.com/index.php?title=jspopular/guide/geolocation), [Autonavi](https://lbs.amap.com/api/javascript-api/guide/services/geolocation#geolocation), or [Tencent](https://lbs.qq.com/service/webService/webServiceGuide/position/webServiceIp). These services use the user's IP address and/or a local app to provide enhanced positioning.
+
 ## Examples
 
 See [Using the Geolocation API](/en-US/docs/Web/API/Geolocation_API/Using_the_Geolocation_API#examples) for example code.
@@ -83,10 +87,6 @@ See [Using the Geolocation API](/en-US/docs/Web/API/Geolocation_API/Using_the_Ge
 ## Browser compatibility
 
 {{Compat}}
-
-### Availability
-
-As Wi-Fi-based locating is often provided by Google, the vanilla Geolocation API may be unavailable in China. You may use local third-party providers such as [Baidu](https://lbsyun.baidu.com/index.php?title=jspopular/guide/geolocation), [Autonavi](https://lbs.amap.com/api/javascript-api/guide/services/geolocation#geolocation), or [Tencent](https://lbs.qq.com/service/webService/webServiceGuide/position/webServiceIp). These services use the user's IP address and/or a local app to provide enhanced positioning.
 
 ## See also
 

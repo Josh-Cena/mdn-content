@@ -11,16 +11,10 @@ It is no longer accurate to refer to colors on the web as "HTML color codes" or 
 
 ## See also
 
-### General knowledge
-
-[Web colors](https://en.wikipedia.org/wiki/Web_colors) on Wikipedia
-
-### Technical reference
-
-To look up web colors on MDN, see our CSS {{cssxref("&lt;color&gt;")}} values reference documentation, or more specifically:
-
-- Color names: {{cssxref("&lt;named-color&gt;")}}.
-- Hexadecimal notations: {{cssxref("&lt;hex-color&gt;")}}.
+- [Web colors](https://en.wikipedia.org/wiki/Web_colors) on Wikipedia
+- {{cssxref("&lt;color&gt;")}}
+- {{cssxref("&lt;named-color&gt;")}}
+- {{cssxref("&lt;hex-color&gt;")}}
 - Color functions:
   - [sRGB](/en-US/docs/Glossary/Color_space#rgb_color_spaces) color space: {{CSSXref("color_value/hsl", "hsl()")}}, {{CSSXref("color_value/hwb", "hwb()")}}, and {{CSSXref("color_value/rgb", "rgb()")}}.
   - [CIELAB](/en-US/docs/Glossary/Color_space#cielab_color_spaces) color space: {{CSSXref("color_value/lab", "lab()")}} and {{CSSXref("color_value/lch", "lch()")}}, {{CSSXref("color_value/oklab", "oklab()")}}, and {{CSSXref("color_value/oklch", "oklch()")}}.

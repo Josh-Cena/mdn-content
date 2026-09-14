@@ -11,15 +11,7 @@ Most user interfaces represent the caret using a thin vertical line or a charact
 
 On the web, a caret is used to represent the insertion point in {{HTMLElement("input")}} and {{HTMLElement("textarea")}} elements, as well as any elements whose [`contenteditable`](/en-US/docs/Web/HTML/Reference/Global_attributes/contenteditable) attribute is set, thereby allowing the contents of the element to be edited by the user.
 
-## See also
-
-- [Caret navigation](https://en.wikipedia.org/wiki/Caret_navigation) on Wikipedia
-
-### CSS related to the caret
-
 You can set the color of the caret for a given element's editable content by setting the element's CSS {{cssxref("caret-color")}} property to the appropriate {{cssxref("&lt;color&gt;")}} value.
-
-### HTML elements that may present a caret
 
 These elements provide text entry fields or boxes and therefore make use of the caret.
 
@@ -31,3 +23,7 @@ These elements provide text entry fields or boxes and therefore make use of the 
 - [`<input type="email">`](/en-US/docs/Web/HTML/Reference/Elements/input/email), [`<input type="tel">`](/en-US/docs/Web/HTML/Reference/Elements/input/tel), and [`<input type="url">`](/en-US/docs/Web/HTML/Reference/Elements/input/url)
 - {{HTMLElement("textarea")}}
 - Any element with its [`contenteditable`](/en-US/docs/Web/HTML/Reference/Global_attributes/contenteditable) attribute set
+
+## See also
+
+- [Caret navigation](https://en.wikipedia.org/wiki/Caret_navigation) on Wikipedia

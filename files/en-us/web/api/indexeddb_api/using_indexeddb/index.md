@@ -656,21 +656,11 @@ We have a complete example using the IndexedDB API. The example uses IndexedDB t
 
 ## See also
 
-Further reading for you to find out more information if desired.
-
-### Reference
-
 - [IndexedDB API Reference](/en-US/docs/Web/API/IndexedDB_API)
 - [Indexed Database API Specification](https://w3c.github.io/IndexedDB/)
 - IndexedDB [interface files](https://searchfox.org/firefox-main/search?q=dom%2FindexedDB%2F.*%5C.idl&path=&case=false&regexp=true) in the Firefox source code
-
-### Tutorials and guides
-
 - [Databinding UI Elements with IndexedDB (2012)](https://web.dev/articles/indexeddb-uidatabinding)
 - [IndexedDB — The Store in Your Browser](<https://learn.microsoft.com/en-us/previous-versions/msdn10/gg679063(v=msdn.10)>)
-
-### Libraries
-
 - [localForage](https://localforage.github.io/localForage/): A Polyfill providing a simple name:value syntax for client-side data storage, which uses IndexedDB in the background, but falls back to Web SQL (deprecated) and then localStorage in browsers that don't support IndexedDB.
 - [Dexie.js](https://dexie.org/): A wrapper for IndexedDB that allows much faster code development via nice, simple syntax.
 - [JsStore](https://jsstore.net/): A simple and advanced IndexedDB wrapper having SQL like syntax.

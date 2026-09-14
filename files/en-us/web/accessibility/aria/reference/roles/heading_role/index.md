@@ -78,6 +78,8 @@ However, instead, you should do:
 
 ## Accessibility concerns
 
+The heading role overrides the native semantic meaning of the element it is being used for. The `aria-level` attribute, in addition, determines what level of heading is being exposed.
+
 > [!WARNING]
 > Using [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) or [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) will hide the content of your heading from assistive technologies, reading the label instead of the heading.
 
@@ -105,10 +107,6 @@ None.
 ## Specifications
 
 {{Specifications}}
-
-## Precedence order
-
-The heading role overrides the native semantic meaning of the element it is being used for. The `aria-level` attribute, in addition, determines what level of heading is being exposed.
 
 ## See also
 

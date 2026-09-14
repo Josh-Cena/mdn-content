@@ -55,25 +55,18 @@ Space has to surround the braille character. A user of braille does not lay a fi
 
 The nature of space can change depending upon what MIME type is being used, and its version. For example, borders on SVG can extend both inward and outward from its dimensions, or for newer versions of SVG, entirely outward from it, thus reducing the space around the SVG to enable perception.
 
-## See also
+## Credits
 
-### MDN
+Heartfelt thanks to Jim Allan of the [Diagram Center](http://diagramcenter.org/) for his discussions on the topic of alternative means of education.
+
+## See also
 
 - [Accessibility: What users can do to browse more safely](/en-US/docs/Web/Accessibility/Guides/Browsing_safely)
 - [Web accessibility for seizures and physical reactions](/en-US/docs/Web/Accessibility/Guides/Seizure_disorders)
 - [Web Accessibility: Understanding Colors and Luminance](/en-US/docs/Web/Accessibility/Guides/Colors_and_Luminance)
-
-### Braille
-
 - [Part 3: A Step-by-Step Guide to Typesetting ADA Braille Correctly in Adobe Illustrator](https://www.tinkeringmonkey.com/guides/ada-signage/a-step-by-step-guide-to-typesetting-ada-braille-correctly-in-adobe-illustrator/)
 - [Spatial Math in BrailleBlaster (4 of 5)](https://www.youtube.com/watch?v=yz9vefDsj1g)
-
-### Math
-
 - [Spatial Reasoning: Why Math Talk is About More Than Numbers](https://dreme.stanford.edu/news/spatial-reasoning-why-math-talk-is-about-more-than-numbers/)
-
-### Scientific Literature
-
 - [Color constancy in context: Roles for local adaptation and levels of reference](https://jov.arvojournals.org/article.aspx?articleid=2192799)
 - [Gamma oscillations and photosensitive epilepsy](https://www.sciencedirect.com/science/article/pii/S0960982217304062?via%3Dihub)
 - [Characterizing the Patterned Images That Precipitate Seizures and Optimizing Guidelines To Prevent Them](https://onlinelibrary.wiley.com/doi/epdf/10.1111/j.1528-1167.2005.01405.x) Arnold Wilkins, John Emmett, and Graham Harding

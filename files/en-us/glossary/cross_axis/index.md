@@ -17,8 +17,11 @@ Alignment of items on the cross axis is achieved with the `align-items` property
 
 ## See also
 
-### Property reference
-
+- Related glossary terms:
+  - {{Glossary("Flex")}}
+  - {{Glossary("Flex Container")}}
+  - {{Glossary("Flex Item")}}
+  - {{Glossary("Grid")}}
 - {{cssxref("align-content")}}
 - {{cssxref("align-items")}}
 - {{cssxref("align-self")}}
@@ -31,16 +34,6 @@ Alignment of items on the cross axis is achieved with the `align-items` property
 - {{cssxref("flex-shrink")}}
 - {{cssxref("justify-content")}}
 - {{cssxref("order")}}
-
-### Further reading
-
-CSS flexbox guides:
-
 - [Basic concepts of flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)
 - [Aligning items in a flex container](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Aligning_items)
 - [Mastering wrapping of flex items](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Wrapping_items)
-- Related glossary terms:
-  - {{Glossary("Flex")}}
-  - {{Glossary("Flex Container")}}
-  - {{Glossary("Flex Item")}}
-  - {{Glossary("Grid")}}

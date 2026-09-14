@@ -358,12 +358,7 @@ The HTML for the form looks like this:
 
 ## See also
 
-### References
-
 - [HTML elements reference](/en-US/docs/Web/HTML/Reference/Elements)
 - [HTML attribute reference](/en-US/docs/Web/HTML/Reference/Attributes)
 - {{DOMxRef("Document_Object_Model", "Document Object Model (DOM)", "", "1")}} reference
-
-### Guides
-
 - [DOM scripting introduction](/en-US/docs/Learn_web_development/Core/Scripting/DOM_scripting)

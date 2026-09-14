@@ -432,17 +432,12 @@ In this section we'll outline these steps. Several of these APIs require explici
 
 ## See also
 
-### Reference
-
 - [Service Worker API](/en-US/docs/Web/API/Service_Worker_API)
 - [Background Synchronization API](/en-US/docs/Web/API/Background_Synchronization_API)
 - [Background Fetch API](/en-US/docs/Web/API/Background_Fetch_API)
 - [Periodic Background Synchronization API](/en-US/docs/Web/API/Web_Periodic_Background_Synchronization_API)
 - [Push API](/en-US/docs/Web/API/Push_API)
 - [Notifications API](/en-US/docs/Web/API/Notifications_API)
-
-### Guides
-
 - [Introducing Background Sync](https://developer.chrome.com/blog/background-sync/) on developer.chrome.com (2017)
 - [Introducing Background Fetch](https://developer.chrome.com/blog/background-fetch/) on developer.chrome.com (2022)
 - [The Periodic Background Sync API](https://developer.chrome.com/docs/capabilities/periodic-background-sync) on developer.chrome.com (2020)

@@ -104,12 +104,6 @@ for (let i = 0; i < 7; i++) {
 
 {{Compat}}
 
-### Gecko-specific notes
-
-- Starting with Gecko 5.0, specifying invalid values for `globalAlpha` no
-  longer throws a `SYNTAX_ERR` exception; these are now correctly silently
-  ignored.
-
 ### WebKit/Blink-specific notes
 
 - In WebKit- and Blink-based browsers, a non-standard and deprecated method

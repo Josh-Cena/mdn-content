@@ -13,13 +13,8 @@ When working with alignment in [CSS grid layout](/en-US/docs/Web/CSS/Guides/Grid
 
 ## See also
 
-### Property reference
-
 - {{cssxref("grid-template-rows")}}
 - {{cssxref("grid-auto-rows")}}
 - {{cssxref("grid")}}
 - {{cssxref("grid-template")}}
-
-### Further reading
-
 - [Basic concepts of grid layout](/en-US/docs/Web/CSS/Guides/Grid_layout/Basic_concepts)

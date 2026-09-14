@@ -14,6 +14,8 @@ The focused element is the element that will receive keyboard and similar events
 By default the browser will scroll the element into view after focusing it, and it may also provide visible indication of the focused element (typically by displaying a "focus ring" around the element).
 Parameter options are provided to disable the default scrolling and force visible indication on elements.
 
+If you call `SVGElement.focus()` from a `mousedown` event handler, you must call `event.preventDefault()` to keep the focus from leaving the `SVGElement`.
+
 ## Syntax
 
 ```js-nolint
@@ -62,10 +64,6 @@ document.getElementById("focusButton").addEventListener("click", () => {
 ## Specifications
 
 {{Specifications}}
-
-## Notes
-
-- If you call `SVGElement.focus()` from a mousedown event handler, you must call `event.preventDefault()` to keep the focus from leaving the `SVGElement`
 
 ## Browser compatibility
 

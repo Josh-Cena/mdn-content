@@ -67,13 +67,10 @@ For a full example, see our [Basic dedicated worker example](https://github.com/
 
 ## Browser compatibility
 
-Support varies for different types of workers. See each worker type's page for specifics.
-
 {{Compat}}
 
-### Cross-origin worker error behavior
-
-In early versions of the spec, loading a cross-origin worker script threw a `SecurityError`. Nowadays, an {{domxref("Worker/error_event", "error")}} event is thrown instead.
+> [!NOTE]
+> Support varies for different types of workers. See each worker type's page for specifics.
 
 ## See also
 

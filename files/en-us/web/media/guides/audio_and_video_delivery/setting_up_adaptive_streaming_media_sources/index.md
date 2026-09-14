@@ -251,32 +251,16 @@ http://media.example.com/segment2.ts
 
 ## See also
 
-Further resources on adaptive streaming.
-
-### General information
-
 - [Adaptive Streaming in the Field](https://www.streamingmedia.com/Articles/Editorial/Featured-Articles/Adaptive-Streaming-in-the-Field-73017.aspx)
-
-### HLS overview and references
-
 - [HTTP Live Streaming](https://developer.apple.com/streaming/)
 - [What is HLS (HTTP-Live-Streaming)?](<https://www.streamingmedia.com/Articles/Editorial/What-Is-.../What-is-HLS-(HTTP-Live-Streaming)-78221.aspx>)
 - [HTTP Live Streaming Overview](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/StreamingMediaGuide/Introduction/Introduction.html)
-
-### MPEG-DASH overview and references
-
 - [Dynamic Adaptive Streaming over HTTP Dataset](https://dl.acm.org/doi/10.1145/2155555.2155570)
 - [DASH Adaptive Streaming for HTML 5 Video](/en-US/docs/Web/API/Media_Source_Extensions_API/DASH_Adaptive_Streaming)
 - [Dynamic Adaptive Streaming over HTTP: From Content Creation to Consumption](https://www.slideshare.net/slideshow/dynamic-adaptive-streaming-over-http-from-content-creation-to-consumption/14933566)
-
-### MPEG-DASH tools
-
 - [DASHEncoder](https://github.com/slederer/DASHEncoder)
 - [MP4Box](https://github.com/gpac/gpac/wiki/MP4Box)
 - [DASH.js](https://github.com/Dash-Industry-Forum/dash.js)
 - [DASH.js Google Group](https://groups.google.com/forum/#!forum/dashjs)
-
-Adaptive streaming examples
-
 - [ITEC – Dynamic Adaptive Streaming over HTTP](https://dash.itec.aau.at/dash-dataset/)
 - [MPEG DASH Media Source Demo](https://web.archive.org/web/20170703160817/https://dash-mse-test.appspot.com/media.html)

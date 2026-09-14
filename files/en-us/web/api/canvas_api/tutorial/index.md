@@ -33,6 +33,6 @@ Using the `<canvas>` element is not very difficult, but you do need a basic unde
 
 ## See also
 
-- [Canvas topic page](/en-US/docs/Web/API/Canvas_API)
+- [Canvas API](/en-US/docs/Web/API/Canvas_API)
 
 {{ Next("Web/API/Canvas_API/Tutorial/Basic_usage") }}

@@ -82,6 +82,8 @@ Some prominent web applications that use or have used the application role prope
 
 ## Accessibility concerns
 
+Applying the `application` role will cause this and all of the descendant elements of this element to be treated like application content, not web content. Any reading mechanisms assistive technologies may have for web content will not apply.
+
 Improperly using the `application` role can unintentionally take away access from information on a web page, so be very mindful of using it. Think hard on if you actually need it and cannot just use a set of other known widgets to accomplish the same task.
 
 If used, the application role should be added to the lowest common container possible, not on the `<body>` element, for example. Also be sure to test what you have written with assistive technology, to verify it works as intended.
@@ -89,10 +91,6 @@ If used, the application role should be added to the lowest common container pos
 ## Specifications
 
 {{Specifications}}
-
-## Precedence order
-
-Applying the `application` role will cause this and all of the descendant elements of this element to be treated like application content, not web content. Any reading mechanisms assistive technologies may have for web content will not apply.
 
 ## See also
 

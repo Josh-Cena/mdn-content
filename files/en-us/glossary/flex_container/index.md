@@ -11,8 +11,6 @@ A value of `flex` causes the element to become a block level flex container, and
 
 ## See also
 
-### Property reference
-
 - {{cssxref("align-content")}}
 - {{cssxref("align-items")}}
 - {{cssxref("flex")}}
@@ -20,9 +18,6 @@ A value of `flex` causes the element to become a block level flex container, and
 - {{cssxref("flex-flow")}}
 - {{cssxref("flex-wrap")}}
 - {{cssxref("justify-content")}}
-
-### Further reading
-
 - [Basic concepts of flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)
 - [Aligning items in a flex container](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Aligning_items)
 - [Mastering wrapping of flex items](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Wrapping_items)

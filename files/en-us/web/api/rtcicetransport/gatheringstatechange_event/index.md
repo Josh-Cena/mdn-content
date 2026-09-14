@@ -75,16 +75,10 @@ pc.getSenders().forEach((sender) => {
 
 - [WebRTC API](/en-US/docs/Web/API/WebRTC_API)
 - [WebRTC connectivity](/en-US/docs/Web/API/WebRTC_API/Connectivity)
-
-### Related RTCIceTransport events
-
-- {{domxref("RTCIceTransport/statechange_event", "statechange")}}
-- {{domxref("RTCIceTransport.selectedcandidatepairchange_event", "selectedcandidatepairchange")}}
-
-### Related RTCPeerConnection events
-
-- {{domxref("RTCPeerConnection.negotiationneeded_event", "negotiationneeded")}}
-- {{domxref("RTCPeerConnection.signalingstatechange_event", "signalingstatechange")}}
-- {{domxref("RTCPeerConnection.iceconnectionstatechange_event", "iceconnectionstatechange")}}
-- {{domxref("RTCPeerConnection.icegatheringstatechange_event", "icegatheringstatechange")}}
-- {{domxref("RTCPeerConnection.connectionstatechange_event", "connectionstatechange")}}
+- The `RTCIceTransport` {{domxref("RTCIceTransport/statechange_event", "statechange")}} event
+- The `RTCIceTransport` {{domxref("RTCIceTransport.selectedcandidatepairchange_event", "selectedcandidatepairchange")}} event
+- The `RTCPeerConnection` {{domxref("RTCPeerConnection.negotiationneeded_event", "negotiationneeded")}} event
+- The `RTCPeerConnection` {{domxref("RTCPeerConnection.signalingstatechange_event", "signalingstatechange")}} event
+- The `RTCPeerConnection` {{domxref("RTCPeerConnection.iceconnectionstatechange_event", "iceconnectionstatechange")}} event
+- The `RTCPeerConnection` {{domxref("RTCPeerConnection.icegatheringstatechange_event", "icegatheringstatechange")}} event
+- The `RTCPeerConnection` {{domxref("RTCPeerConnection.connectionstatechange_event", "connectionstatechange")}} event
