@@ -211,7 +211,7 @@ Absolute specifiers can be any kind of [URL](/en-US/docs/Web/URI) that resolve t
 
   `text/javascript` data URLs are still interpreted as modules, but they cannot use relative imports — because the `data:` URL scheme is not hierarchical. That is, `import x from "data:text/javascript,import y from './y.js';"` will throw an error because the relative specifier `'./y.js'` cannot be resolved.
 
-- [`node:` URLs](https://nodejs.org/api/esm.html#node-imports) resolve to built-in Node.js modules. They are supported by Node and other runtimes that claim compatibility with Node, such as Bun.
+- [`node:` URLs](https://nodejs.org/api/esm.html#node-imports) resolve to built-in Node.js modules. They are supported by Node and other runtimes that claim compatibility with Node, such as {{Glossary("Bun")}}.
 
 Bare specifiers, popularized by CommonJS, are resolved within the `node_modules` directory. For example, if you have `import x from "foo"`, then the runtime will look for the `foo` package within any `node_modules` directory in the parent directories of the current module. This behavior can be reproduced in browsers using [import maps](/en-US/docs/Web/JavaScript/Guide/Modules#importing_modules_using_import_maps), which also enable you to customize resolution in other ways.
 

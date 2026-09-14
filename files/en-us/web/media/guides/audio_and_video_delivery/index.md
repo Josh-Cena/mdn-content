@@ -246,7 +246,7 @@ The main formats used for adaptive streaming are [HLS](/en-US/docs/Web/Media/Gui
 > [!NOTE]
 > Currently Safari does not support DASH although dash.js will work on newer versions of Safari scheduled for release with OS X Yosemite.
 
-DASH also provides a number of profiles including onDemand profiles that require no preprocessing and splitting up of media files. There are also a number of cloud based services that will convert your media to both HLS and DASH.
+DASH also provides a number of profiles including onDemand profiles that require no preprocessing and splitting up of media files. There are also a number of {{Glossary("cloud computing", "cloud services")}} that will convert your media to both HLS and DASH.
 
 For further information see [Live streaming web audio and video](/en-US/docs/Web/Media/Guides/Audio_and_video_delivery/Live_streaming_web_audio_and_video).
 

@@ -50,7 +50,7 @@ The production environment is the environment provided by the server computer wh
 - Web server infrastructure, possibly including a web server, reverse proxy, load balancer, etc.
 - Databases on which your website is dependent.
 
-The server computer could be located on your premises and connected to the Internet by a fast link, but it is far more common to use a computer that is hosted "in the cloud". What this actually means is that your code is run on some remote computer (or possibly a "virtual" computer) in your hosting company's data center(s). The remote server will usually offer some guaranteed level of computing resources (e.g., CPU, RAM, storage memory, etc.) and Internet connectivity for a certain price.
+The server computer could be located on your premises and connected to the Internet by a fast link, but it is far more common to use a computer that is hosted "in the {{Glossary("cloud")}}". What this actually means is that your code is run on some remote computer (or possibly a "virtual" computer) in your hosting company's data center(s). The remote server will usually offer some guaranteed level of computing resources (e.g., CPU, RAM, storage memory, etc.) and Internet connectivity for a certain price.
 
 This sort of remotely accessible computing/networking hardware is referred to as _Infrastructure as a Service (IaaS)_. Many IaaS vendors provide options to preinstall a particular operating system, onto which you must install the other components of your production environment. Other vendors allow you to select more fully-featured environments, perhaps including a complete Node setup.
 

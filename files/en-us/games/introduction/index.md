@@ -64,7 +64,7 @@ You can truly think of the Web as a better target platform for your game. As we 
     <tr>
       <td><strong>Storage</strong></td>
       <td>
-        <a href="/en-US/docs/Web/API/IndexedDB_API">IndexedDB</a> or the "cloud"
+        <a href="/en-US/docs/Web/API/IndexedDB_API">IndexedDB</a> or the "{{Glossary("cloud")}}"
       </td>
     </tr>
     <tr>

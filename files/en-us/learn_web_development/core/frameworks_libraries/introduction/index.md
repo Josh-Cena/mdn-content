@@ -328,7 +328,7 @@ If your web development project is a personal portfolio with a few pages, and th
 
 ### Larger code base and abstraction
 
-Frameworks allow you to write more declarative code – and sometimes _less_ code overall – by dealing with the DOM interactions for you, behind the scenes. This abstraction is great for your experience as a developer, but it isn't free. In order to translate what you write into DOM changes, frameworks have to run their own code, which in turn makes your final piece of software larger and more computationally expensive to operate.
+Frameworks allow you to write more declarative code – and sometimes _less_ code overall – by dealing with the DOM interactions for you, behind the scenes. This {{Glossary("abstraction")}} is great for your experience as a developer, but it isn't free. In order to translate what you write into DOM changes, frameworks have to run their own code, which in turn makes your final piece of software larger and more computationally expensive to operate.
 
 Some extra code is inevitable, and a framework that supports tree-shaking (removal of any code that isn't actually used in the app during the build process) will allow you to keep your applications small, but this is still a factor you need to keep in mind when considering your app's performance, especially on more network/storage-constrained devices, like mobile phones.
 
