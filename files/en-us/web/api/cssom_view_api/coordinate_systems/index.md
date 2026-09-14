@@ -16,7 +16,7 @@ In the coordinate systems used by web technologies, the horizontal offset is cal
 
 On the web, the default origin is the _top_-left corner of a given context (with positive y-coordinate values being below the origin). Note that this is unlike most mathematical models, where the origin is at the _bottom_-left corner, with positive y-coordinate values being above the origin.
 
-When using the third dimension to layer objects from front to back, we use the **z-axis**. The z-axis runs from the viewer to the screen's surface. The CSS {{cssxref("z-index")}} property value affects where positioned elements sit on this axis, giving the effect of moving away from or toward the viewer.
+The z-axis is used to represent depth in a three-dimensional space. Because the screen is a flat surface, generally points on the screen don't have a z-coordinate. The z-coordinate is used when directly manipulating objects in the 3D space for rendering, such as when using CSS {{cssxref("transform")}} to rotate or move elements in 3D space. In this case, the z-axis runs perpendicular to the screen, with positive values coming out of the screen toward the viewer and negative values going into the screen away from the viewer. The CSS {{cssxref("z-index")}} property is unrelated to the 3D coordinate system but works the same way, with higher values being closer to the viewer (and thus appearing "on top" of elements with lower values).
 
 > [!NOTE]
 > It's possible to change the definitions and orientations of these coordinate systems using CSS properties such as {{cssxref("transform")}}. However, we'll only talk about the standard coordinate system for now.
