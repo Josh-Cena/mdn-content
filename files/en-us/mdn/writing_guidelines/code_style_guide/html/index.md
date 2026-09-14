@@ -18,10 +18,54 @@ On MDN Web Docs, we use [Prettier](https://prettier.io/) as a code formatter to 
 
 Prettier formats all the code and keeps the style consistent. Nevertheless, there are a few additional rules that you need to follow.
 
+### Use modern HTML features when supported
+
+You can use new features once every major browser — Chrome, Edge, Firefox, and Safari — supports them (a.k.a. {{glossary("Baseline")}}).
+
+This rule does not apply to the HTML feature being documented on the page (which is dictated instead by the [criteria for inclusion](/en-US/docs/MDN/Writing_guidelines/Criteria_for_inclusion)). For example, you can document [non-standard or experimental](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete) features and write complete examples demonstrating their behavior, but you should refrain from using these features in the demos for other unrelated features, such as a web API.
+
+### Follow common best practices
+
+There are some uniformly acknowledged principles that we don't need to exhaustively state here:
+
+- Ensure that your code doesn't have syntax errors, which can result in the [property or declaration being ignored](/en-US/docs/Web/CSS/CSS_syntax/Error_handling). Standard syntax that hasn't been implemented is acceptable, if it fits our [general rule about modern CSS features](#use_modern_css_features_when_supported).
+- Don't use [non-standard, deprecated, or obsolete](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete) features. This guideline extends to [prefixed features](/en-US/docs/Glossary/Vendor_Prefix#css_prefixes): use the prefixed alternative _only if_ the standard feature is not available (see our [general rule about modern CSS features](#use_modern_css_features_when_supported)). If the reader needs broader compatibility, they can either add the prefixed fallback themselves or use a CSS postprocessor.
+- Don't write redundant or non-functional code, which is a common indicator of bugs or refactoring leftovers. This includes repeated properties in a declaration, empty declarations, empty comments, or selectors that don't match any elements.
+
+## Casing convention on MDN
+
+Use lowercase for all case-insensitive constructs, including the doctype declaration, element names, and attribute names/values. This creates a consistent appearance and allows for faster markup writing.
+
+```html example-good
+<p class="nice">This looks nice and neat</p>
+```
+
+```html-nolint example-bad
+<P CLASS="WHOA-THERE">Why is my markup shouting?</P>
+```
+
 ## Complete HTML document
 
 > [!NOTE]
-> The guidelines in this section apply only when you need to show a complete HTML document. A snippet is usually enough to demonstrate a feature. When using the [EmbedLiveSample macro](/en-US/docs/MDN/Writing_guidelines/Page_structures/Code_examples#live_samples), just include the HTML snippet; it will automatically be inserted into a full HTML document when displayed.
+> The guidelines in this section apply only when you need to show a complete HTML document, such as the starting point of a hands-on tutorial. A snippet is usually enough to demonstrate a feature. When using the [EmbedLiveSample macro](/en-US/docs/MDN/Writing_guidelines/Page_structures/Code_examples#live_samples), just include the HTML snippet; it will automatically be inserted into a full HTML document when displayed.
+
+The following should be the starting point of any complete HTML document on MDN.
+
+```html example-good
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Document title</title>
+    <!-- More metadata goes here -->
+  </head>
+  <body>
+    <!-- Content goes here -->
+    <!-- Inline scripts go here -->
+  </body>
+</html>
+```
 
 ### Doctype
 
@@ -77,7 +121,7 @@ You should put all attribute values in double quotes. It is tempting to omit quo
 
 Omitting quotes can also cause problems. In the above example, the `alt` attribute will be interpreted as multiple attributes because there are no quotes to specify that "A circular globe icon" is a single attribute value.
 
-## Boolean attributes
+### Boolean attributes
 
 Don't include values for boolean attributes (but do include values for {{glossary("enumerated")}} attributes); you can just write the attribute name to set it. For example, you can write:
 
@@ -89,18 +133,6 @@ This is perfectly understandable and works fine. If a boolean HTML attribute is 
 
 ```html example-bad
 <input required="required" />
-```
-
-## Casing convention on MDN
-
-Use lowercase for all case-insensitive constructs, including the doctype declaration, element names, and attribute names/values. This creates a consistent appearance and allows for faster markup writing.
-
-```html example-good
-<p class="nice">This looks nice and neat</p>
-```
-
-```html-nolint example-bad
-<P CLASS="WHOA-THERE">Why is my markup shouting?</P>
 ```
 
 ## Class and ID names
@@ -131,7 +163,7 @@ Instead of:
 <p>&copy; 2018 Me</p>
 ```
 
-## HTML elements
+## Elements
 
 There are some rules for writing about HTML elements on MDN Web Docs. Adhering to these rules produces consistent descriptions of elements and their components and also ensures correct linking to detailed documentation.
 
