@@ -13,21 +13,42 @@ A **viewport** is a user agent feature used to establish the initial containing 
 
 The generic _viewport_ term generally refers to the area in computer graphics being currently viewed. In web browser terms, that is generally the same as the browser window, excluding the UI, menu bar, etc. That is the part of the document you are viewing.
 
-As a document loads, the viewport goes through two stages:
+> [!NOTE]
+> The browser UI is never considered for any viewport calculation purposes. The only APIs that consider the browser UI are the {{domxref("Window.outerHeight")}} and {{domxref("Window.outerWidth")}} properties, which return the size of the entire browser window including all the window chrome.
+
+As a document gets rendered, there are three relevant viewports to consider:
 
 - **Initial viewport**
-  - : The _initial viewport_ refers to the window or viewing area of the UA before user agent styles, HTML {{htmlelement("meta")}} tags, or CSS styles have overridden its size. The initial viewport size is based on the size of the window or viewing area, and not the content. The size of a full-screen user agent's initial viewport will differ between orientations and devices, but will always be the same for the same device in the same orientation.
+  - : The _initial viewport_ refers to the window or viewing area of the UA before user agent styles, HTML {{htmlelement("meta")}} tags, or CSS styles have overridden its size. The initial viewport size is based on the size of the window or viewing area, and not the content. Any browser user interface elements such as toolbars, tab bars, and scroll bars, are excluded.
+
+    - If the browser application is not in fullscreen, the initial viewport size is based on the size of the browser window (with browser UI excluded).
+    - On most mobile devices and when the browser is in fullscreen mode, the initial viewport is the entire screen (with browser UI excluded).
+    - For [paged media](/en-US/docs/Web/CSS/CSS_paged_media), the initial containing block is based on the page area. The page area can be set through {{cssxref("@page")}} rules.
+
+    If you think of the browser laying out the document as drawing on a {{htmlelement("canvas")}}, the initial viewport is the size of the canvas element defined in CSS—the rendered area will fill exactly this space in the user's eyes.
 
 - **Actual viewport**
-  - : The _actual viewport_ is the viewport you get after processing the [viewport `<meta>` tag](/en-US/docs/Web/HTML/Reference/Elements/meta/name/viewport). Content designed for large viewports may exhibit a variety of bugs when viewed in smaller viewports, including unintended wrapping, clipped content, and incorrectly sized {{glossary("scroll container", "scroll containers")}}. The viewport meta tag provides hints about the initial size of the viewport. The actual viewport is the size defined by its [`content`](/en-US/docs/Web/HTML/Reference/Elements/meta#content) attribute. If this tag is omitted, some mobile browsers render content using a fixed initial containing block width, typically `980px`. They set the width of the actual viewport to this value, then scale the content down to fit it, making the CSS pixel size smaller than an actual pixel.
+  - : The _actual viewport_ is the viewport you get after processing the [viewport `<meta>` tag](/en-US/docs/Web/HTML/Reference/Elements/meta/name/viewport). The tag's `content` attribute allows you you explicitly specify the viewport width and height, which may be different from the initial viewport size.
+
+    If this tag is omitted, the actual viewport does not necessarily default to the initial viewport. Some mobile browsers render content using a larger actual viewport width, typically `980px`. After laying out the content, the content is scaled down to fit the screen, making the CSS pixel size smaller than an actual pixel. This is because content designed for large viewports may exhibit a variety of bugs when viewed in smaller viewports, including unintended wrapping, clipped content, and incorrectly sized {{glossary("scroll container", "scroll containers")}}, so mobile browsers trick these non-responsive pages into thinking they are being rendered on a larger screen.
+
+    To continue the {{htmlelement("canvas")}} analogy, the actual viewport is the size of the coordinate space inside the canvas, defined by the `width` and `height` attributes. This affects any drawing operations on the canvas.
+
+- **Layout viewport**
+  - :
+
+- **Visual viewport**
+  - : The visual viewport is the part of the web page that is currently visible in the browser and can change. When the user pinch-zooms the page, pops open a dynamic keyboard, or when a previously hidden address bar becomes visible, the visual viewport shrinks but the layout viewport is unchanged.
+
+The web contains two viewports, the **layout viewport** and the **visual viewport**.
+
+[Fixed](/en-US/docs/Web/CSS/position#fixed_positioning) sticky headers or footers, as discussed above, stick to the top and bottom of the _layout viewport_, and therefore remain in view when we zoom in with the keyboard. If you pinch-zoom, the layout viewport may not be fully visible. If you magnify from the middle of the layout viewport, the content will expand in all four directions. If you have a sticky header or footer, they will still be stuck to the top or bottom of the layout viewport, but they may not be visible at the top and bottom of the device's screen — which is the visual viewport. The visual viewport is the currently visible portion of the layout viewport. If you scroll down, you are changing the contents of the visual viewport and bringing the bottom of the layout viewport into view, displaying the sticky footer, which will then stay stuck at the bottom.
+
+The visual viewport is the visual portion of a screen not including on-screen keyboards, areas outside of a pinch-zoom area, or other feature that doesn't scale with the dimensions of a page. The visual viewport is the same size as the layout viewport or smaller.
+
+For a page containing iframes, objects, or external SVG, both the containing pages and each included file has their own unique window object. Only the top-level window has a visual viewport that may be distinct from the layout viewport. For included documents, the visual viewport and layout viewport are the same.
 
 Documents, like this article, may be very long. Your viewport is everything that is currently visible; notably, the "what is a viewport" section, and perhaps some of the navigation menu. The size of the viewport depends on the size of the screen, whether the browser is in fullscreen mode or not, and whether or not the browser is zoomed in. Content outside the viewport, such as the _See Also_ section in this document, is likely to not be visible onscreen until scrolled into view.
-
-- On larger monitors where applications aren't necessarily full screen, the viewport is the size of the browser window.
-- On most mobile devices and when the browser is in fullscreen mode, the viewport is the entire screen.
-- In fullscreen mode, the viewport is the device screen, the window is the browser window, which can be as big as the viewport or smaller, and the document is the website, which can be much taller or wider than the viewport.
-
-For [paged media](/en-US/docs/Web/CSS/Guides/Paged_media), the initial containing block is based on the page area. The page area can be set through {{cssxref("@page")}} rules.
 
 To recap, the viewport is basically the part of the document that is currently visible.
 
@@ -85,16 +106,6 @@ body > footer {
 ```
 
 We got the 800 x 533 measurement when we zoomed in using the keyboard. The header and footer stayed flush against the top and bottom of the window. But what if we had pinched-zoomed on a tablet? What if a dynamic keyboard pops open on a phone?
-
-### Layout and visual viewports
-
-The web contains two viewports, the **layout viewport** and the **visual viewport**. The visual viewport is the part of the web page that is currently visible in the browser and can change. When the user pinch-zooms the page, pops open a dynamic keyboard, or when a previously hidden address bar becomes visible, the visual viewport shrinks but the layout viewport is unchanged.
-
-[Fixed](/en-US/docs/Web/CSS/Reference/Properties/position#fixed_positioning) sticky headers or footers, as discussed above, stick to the top and bottom of the _layout viewport_, and therefore remain in view when we zoom in with the keyboard. If you pinch-zoom, the layout viewport may not be fully visible. If you magnify from the middle of the layout viewport, the content will expand in all four directions. If you have a sticky header or footer, they will still be stuck to the top or bottom of the layout viewport, but they may not be visible at the top and bottom of the device's screen — which is the visual viewport. The visual viewport is the currently visible portion of the layout viewport. If you scroll down, you are changing the contents of the visual viewport and bringing the bottom of the layout viewport into view, displaying the sticky footer, which will then stay stuck at the bottom.
-
-The visual viewport is the visual portion of a screen not including on-screen keyboards, areas outside of a pinch-zoom area, or other feature that doesn't scale with the dimensions of a page. The visual viewport is the same size as the layout viewport or smaller.
-
-For a page containing iframes, objects, or external SVG, both the containing pages and each included file has their own unique window object. Only the top-level window has a visual viewport that may be distinct from the layout viewport. For included documents, the visual viewport and layout viewport are the same.
 
 ### CSS
 
